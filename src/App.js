@@ -151,8 +151,10 @@ class App extends Component {
         />
         {/* //<MarkerModal show={true} /> */}
         Yo this is desktop
-        <ChatBox />
-        <ChatControls />
+
+
+        <ChatBox name="ACMI"/>
+        <ChatControls name="ACMI"/>
       </div>
     );
   }
