@@ -151,11 +151,16 @@ class App extends Component {
         />
         {/* //<MarkerModal show={true} /> */}
         Yo this is desktop
-
-
-        <ChatBox name="ACMI"/>
-        <ChatControls name="ACMI"/>
+        <ChatBox name="ACMI" />
+        <ChatControls name="ACMI" />
       </div>
+    );
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
     );
   }
 
@@ -179,7 +184,7 @@ class App extends Component {
   }
 
   render() {
-    const isMobile = false;
+    const isMobile = true; //this.isMobileDevice();
     if (isMobile) return this.renderMobile();
     else return this.renderDesktop();
   }

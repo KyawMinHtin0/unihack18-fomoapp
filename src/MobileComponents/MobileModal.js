@@ -4,6 +4,8 @@ import { COLORS } from "../Utils/Constants";
 import { Data } from "../Utils/LocationV1";
 import ChatBox from "../Components/ChatBox";
 import ChatControls from "../Components/ChatControls";
+import { Link } from "react-router-dom";
+import { Text } from "../Components/Text";
 
 const Cover = glamorous.div(
   {
@@ -36,6 +38,13 @@ const CoverTitle = glamorous.div({
   padding: "20px"
 });
 
+const ChatModalContainer = glamorous.div({
+  display: "flex",
+  height: "auto",
+  padding: "20px 50px",
+  flexDirection: "column"
+});
+
 export default class MobileModal extends Component {
   getDescription = () => {
     return "Bigsound is not just a music festival, it’s an ideas conference where local and international experts gather to talk about developments, ideas and opportunities in the music industry";
@@ -65,10 +74,15 @@ export default class MobileModal extends Component {
     return (
       <div>
         <Cover imgUrl={imgUrl}>
+          <Link to={{ pathname: "/" }}>
+            <Text type="MESSAGE">Back</Text>
+          </Link>
           <CoverTitle>{name}</CoverTitle>
         </Cover>
-        <ChatBox />
-        <ChatControls />
+        <ChatModalContainer>
+          <ChatBox name={name} />
+          <ChatControls name={name} />
+        </ChatModalContainer>
         Empty {this.props.match.params.number}
       </div>
     );

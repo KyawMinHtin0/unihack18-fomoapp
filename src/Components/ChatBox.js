@@ -40,31 +40,47 @@ const MessageContainer = glamorous.div({
 });
 
 export default class ChatBox extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       messages: []
-    }
+    };
   }
 
-  componentDidMount(){
-    db.collection("Melbourne4-chat").doc("locations").collection(this.props.name).doc("chat")
-    .onSnapshot(function(doc) {
-        console.log("Current data: ", doc.data());
-        let messageArray = [];
-        let data = doc.data();
-        for(const message in data){
-          messageArray.push({
-            user: message.split("|")[0],
-            text: data[message]["message"],
-            time: data[message]["time"]
-          })
-        }
-        messageArray.sort(function(a, b) {
-          return a.time - b.time;
-        })
-        this.setState({messages:messageArray});
-    }.bind(this));
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  };
+
+  componentDidMount() {}
+
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
+  componentDidMount() {
+    db.collection("Melbourne4-chat")
+      .doc("locations")
+      .collection(this.props.name)
+      .doc("chat")
+      .onSnapshot(
+        function(doc) {
+          console.log("Current data: ", doc.data());
+          let messageArray = [];
+          let data = doc.data();
+          for (const message in data) {
+            messageArray.push({
+              user: message.split("|")[0],
+              text: data[message]["message"],
+              time: data[message]["time"]
+            });
+          }
+          messageArray.sort(function(a, b) {
+            return a.time - b.time;
+          });
+          this.setState({ messages: messageArray });
+        }.bind(this)
+      );
+    this.scrollToBottom();
   }
 
   getMessages = () => {
@@ -89,6 +105,16 @@ export default class ChatBox extends Component {
 
     const Messages = messagelist.map(item => this.renderMessage(item));
 
-    return <ChatBoxContainer>{Messages} </ChatBoxContainer>;
+    return (
+      <ChatBoxContainer>
+        {Messages}{" "}
+        <div
+          style={{ float: "left", clear: "both" }}
+          ref={el => {
+            this.messagesEnd = el;
+          }}
+        />
+      </ChatBoxContainer>
+    );
   }
 }

@@ -4,7 +4,7 @@ import { Text } from "./Text";
 import { COLORS } from "../Utils/Constants";
 import Heart from "../Images/heartbutton.png";
 import Send from "../Images/airplane.png";
-const uuidv4 = require('uuid/v4');
+const uuidv4 = require("uuid/v4");
 const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");
@@ -28,6 +28,8 @@ const MessageInputBox = glamorous.input({
   fontSize: "12pt",
   fontColor: "black",
   alignSelf: "flex-end",
+  flexgrow: "1",
+
   ":focus": {
     outlineWidth: 0
   }
@@ -45,58 +47,84 @@ const ButtonContainer = glamorous.div({
 });
 
 export default class ChatControls extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.user = `unihack-${uuidv4().split("-")[0]}`;
     this.state = {
       message: ""
-    }
+    };
   }
 
   onSend = () => {
-    console.log(this.user, this.state.message)
-    var chatRef = db.collection("Melbourne4-chat").doc("locations").collection(this.props.name).doc("chat");
+    if (!this.state.message) return null;
+    console.log(this.user, this.state.message);
+    var chatRef = db
+      .collection("Melbourne4-chat")
+      .doc("locations")
+      .collection(this.props.name)
+      .doc("chat");
     // Set the "capital" field of the city 'DC'
-    let timestamp = Math.round((new Date()).getTime() / 1000)
-    return chatRef.update({
+    let timestamp = Math.round(new Date().getTime() / 1000);
+    this.setState({ message: "" });
+
+    return chatRef
+      .update({
         [`${this.user}|${timestamp}`]: {
-          "message": this.state.message,
-          "time": timestamp
+          message: this.state.message,
+          time: timestamp
         }
-    })
-    .then(function() {
+      })
+      .then(function() {
         console.log("Document successfully updated!");
-    })
-    .catch(function(error) {
+      })
+      .catch(function(error) {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
-    });
-  }
+      });
+  };
 
   onHeart = () => {
-    console.log(this.user, this.state.message)
-    var chatRef = db.collection("Melbourne4-chat").doc("locations").collection(this.props.name).doc("chat");
+    console.log(this.user, this.state.message);
+    var chatRef = db
+      .collection("Melbourne4-chat")
+      .doc("locations")
+      .collection(this.props.name)
+      .doc("chat");
     // Set the "capital" field of the city 'DC'
-    let timestamp = Math.round((new Date()).getTime() / 1000)
-    return chatRef.update({
+    let timestamp = Math.round(new Date().getTime() / 1000);
+    return chatRef
+      .update({
         [`${this.user}|${timestamp}`]: {
-          "message": "♥️",
-          "time": timestamp
+          message: "♥️",
+          time: timestamp
         }
-    })
-    .then(function() {
+      })
+      .then(function() {
         console.log("Document successfully updated!");
-    })
-    .catch(function(error) {
+      })
+      .catch(function(error) {
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
-    });
-  }
+      });
+  };
+
+  keyPress = e => {
+    if (e.keyCode == 13) {
+      console.log("value", e.target.value);
+      // put the login here
+      this.onSend(e);
+      this.setState({ message: "" });
+    }
+  };
 
   render() {
     return (
       <MessageInputContainer>
-        <MessageInputBox value={this.state.message} onChange={(event) => this.setState({message:event.target.value})}/>
+        <MessageInputBox
+          value={this.state.message}
+          onChange={event => this.setState({ message: event.target.value })}
+          onKeyDown={this.keyPress}
+        />
         <ButtonContainer onClick={this.onSend}>
           <img
             src={Send}
