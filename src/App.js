@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import MapGL, { Marker } from "react-map-gl";
-import glamorous from "glamorous";
+import MapGL, { Marker, FlyToInterpolator } from "react-map-gl";
+import glamorous, { Div } from "glamorous";
+import { MELB_LAT, MELB_LONG } from "./Utils/Constants";
+import { TrendingMarker } from "./Components/Marker";
+import { FadeOverlay } from "./Components/FadeOverlay";
+
 require("dotenv").config();
 
-const POI = glamorous.div({
+const DebugText = glamorous.div({
   borderRadius: "50px",
-  width: "50px",
-  height: "50px",
-  backgroundColor: "red"
+  maxWidth: "500px",
+  wordWrap: "break-word"
 });
 
 class App extends Component {
@@ -15,13 +18,24 @@ class App extends Component {
     viewport: {
       width: 1000,
       height: 500,
-      latitude: 37.7577,
-      longitude: -122.4376,
-      zoom: 8
-    }
+      latitude: MELB_LAT,
+      longitude: MELB_LONG,
+      zoom: 13
+    },
+    dragPan: true
+  };
+
+  toggleDrag = () => {
+    const { dragPan } = this.state;
+    console.log("here");
+    const viewport = {
+      dragPan: !dragPan
+    };
+    this.setState(viewport);
   };
 
   render() {
+    const { dragPan } = this.state;
     return (
       <div className="App">
         <MapGL
@@ -29,16 +43,20 @@ class App extends Component {
           mapStyle="mapbox://styles/khtin/cjk46q8hh4fen2sqz98wylqrd"
           mapboxApiAccessToken={process.env.REACT_APP_MapboxAccessToken}
           onViewportChange={viewport => this.setState({ viewport })}
+          dragPan={dragPan}
         >
           <Marker
-            latitude={37.78}
-            longitude={-122.41}
+            latitude={MELB_LAT}
+            longitude={MELB_LONG}
             offsetLeft={-20}
             offsetTop={-10}
           >
-            <POI>TRENDDDING!!!🔥🔥🔥🔥🔥🔥🔥🔥</POI>
+            <TrendingMarker onClick={this.toggleDrag} />
+            <FadeOverlay display={!dragPan} onClick={this.toggleDrag} />
           </Marker>
         </MapGL>
+        <TrendingMarker onClick={this.gotoMelb} />
+        <DebugText>{JSON.stringify(this.state)}</DebugText>
       </div>
     );
   }
