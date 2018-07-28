@@ -6,6 +6,7 @@ const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");
 var db = firebase.firestore();
+import { CSSTransition } from "react-transition-group";
 
 const ChatBoxContainer = glamorous.div({
   display: "flex",
@@ -24,9 +25,22 @@ const MessageContainer = glamorous.div({
   minHeight: "20px",
   width: "fit-content",
   marginBottom: "10px",
-  transition: "0.2s",
   ":hover": {
     transform: "scale(1.02)"
+  },
+  transition: "opacity 300ms ease-in-out",
+  opacity: 1,
+  ".fade-enter": {
+    opacity: 0
+  },
+  ".fade-enter-active": {
+    opacity: 1
+  },
+  ".fade-exit": {
+    opacity: 1
+  },
+  ".fade-exit-active": {
+    opacity: 0
   }
 });
 
@@ -35,7 +49,7 @@ export default class MapChatBox extends Component {
     super(props);
     this.state = {
       messages: [],
-      show: true
+      show: false
     };
   }
 
@@ -75,14 +89,21 @@ export default class MapChatBox extends Component {
 
   renderMessage = message => {
     console.log(message);
+    const { show } = this.state;
     return (
-      <MessageContainer key={`${message.time}`} id={`${this.props.name}`}>
-        <Text type="MESSAGE">
-          <span>
-            <b>{message.user}:</b> {message.text}
-          </span>
-        </Text>
-      </MessageContainer>
+      <CSSTransition in={show} timeout={500} classNames="fade" unmountOnExit>
+        <MessageContainer
+          key={`${message.time}`}
+          id={`${this.props.name}`}
+          onClick={() => this.setState({ show: !show })}
+        >
+          <Text type="MESSAGE">
+            <span>
+              <b>{message.user}:</b> {message.text}
+            </span>
+          </Text>
+        </MessageContainer>
+      </CSSTransition>
     );
   };
 
