@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import MapGL, { Marker } from "react-map-gl";
 import glamorous from "glamorous";
+import { CSSTransition } from "react-transition-group";
+
 import { MELB_LAT, MELB_LONG, MODAL_HEIGHT } from "./Utils/Constants";
 import { TrendingMarker } from "./Components/Marker";
 import { FadeOverlay } from "./Components/FadeOverlay";
@@ -42,16 +44,19 @@ const DebugText = glamorous.div({
 //   }
 // );
 
+const Box = glamorous.div({});
+
 class App extends Component {
   state = {
     viewport: {
-      width: 1000,
-      height: 500,
+      width: 2000,
+      height: 1400,
       latitude: MELB_LAT,
       longitude: MELB_LONG,
       zoom: 13
     },
-    interactive: true
+    interactive: true,
+    show: false
   };
 
   toggleDrag = () => {
@@ -64,7 +69,7 @@ class App extends Component {
   };
 
   render() {
-    const { interactive } = this.state;
+    const { interactive, show } = this.state;
     return (
       <div className="App">
         <MapGL
@@ -84,7 +89,7 @@ class App extends Component {
             <FadeOverlay display={!interactive} onClick={this.toggleDrag} />
           </Marker>
         </MapGL>
-        <TrendingMarker onClick={this.gotoMelb} />
+        <TrendingMarker onClick={() => this.setState({ show: !show })} />
         <DebugText>{JSON.stringify(this.state)}</DebugText>
         {/* <ModalContainer>
           <Modal height={MODAL_HEIGHT.LARGE}>
@@ -95,7 +100,7 @@ class App extends Component {
             <Modal height={MODAL_HEIGHT.MEDIUM} />
           </ModalVerticalContainer>
         </ModalContainer> */}
-        <MarkerModal />
+        <MarkerModal show={!interactive} />
       </div>
     );
   }

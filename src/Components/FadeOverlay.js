@@ -10,7 +10,7 @@ export const FadeOverlay = glamorous.div(
     right: 0,
     bottom: 0,
     display: "flex",
-    transition: "0.3s"
+    transition: "0.5s"
   },
   props => {
     const display = props.display;
