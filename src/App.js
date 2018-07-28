@@ -4,6 +4,8 @@ import glamorous from "glamorous";
 import { CSSTransition } from "react-transition-group";
 
 import { MELB_LAT, MELB_LONG, MODAL_HEIGHT } from "./Utils/Constants";
+import { Data } from "./Utils/LocationV1";
+
 import { TrendingMarker } from "./Components/Marker";
 import { FadeOverlay } from "./Components/FadeOverlay";
 import MarkerModal from "./Components/MarkerModal";
@@ -58,7 +60,8 @@ class App extends Component {
       zoom: 15
     },
     interactive: true,
-    show: false
+    show: false,
+    activeLocationId: 0
   };
 
   toggleDrag = () => {
@@ -70,8 +73,35 @@ class App extends Component {
     this.setState(viewport);
   };
 
+  toggleModal = id => {
+    this.setState({ activeLocationId: id });
+    this.toggleDrag();
+  };
+
+  getData = () => {
+    return Data;
+  };
+
+  renderMarker = (location, index) => {
+    const { lat, lng, name } = location.meta_data;
+    return (
+      <Marker latitude={lat} longitude={lng} offsetLeft={-20} offsetTop={-10}>
+        <TrendingMarker onClick={() => this.toggleModal(index)} />
+        {name}
+      </Marker>
+    );
+  };
+
+  renderAllMarkers = () => {
+    const data = this.getData();
+    const markers = data.map((x, i) => this.renderMarker(x, i));
+    return markers;
+  };
+
   render() {
-    const { interactive, show } = this.state;
+    const { interactive, show, activeLocationId } = this.state;
+    const allMarkers = this.renderAllMarkers();
+    console.log(Data);
     return (
       <div className="App">
         <MapGL
@@ -81,15 +111,17 @@ class App extends Component {
           onViewportChange={viewport => this.setState({ viewport })}
           dragPan={interactive}
         >
-          <Marker
+          {/* <Marker
             latitude={MELB_LAT}
             longitude={MELB_LONG}
             offsetLeft={-20}
             offsetTop={-10}
           >
             <TrendingMarker onClick={this.toggleDrag} />
-            <FadeOverlay display={!interactive} onClick={this.toggleDrag} />
-          </Marker>
+          </Marker> */}
+          <FadeOverlay display={!interactive} onClick={this.toggleDrag} />
+
+          {allMarkers}
         </MapGL>
         <TrendingMarker onClick={() => this.setState({ show: !show })} />
         <DebugText>{JSON.stringify(this.state)}</DebugText>
@@ -102,8 +134,12 @@ class App extends Component {
             <Modal height={MODAL_HEIGHT.MEDIUM} />
           </ModalVerticalContainer>
         </ModalContainer> */}
-        <MarkerModal show={!interactive} />
-        <MarkerModal show={true} />
+        <MarkerModal
+          activeLocationId={activeLocationId}
+          data={Data}
+          show={!interactive}
+        />
+        {/* //<MarkerModal show={true} /> */}
 
         <ChatBox />
         <ChatControls />

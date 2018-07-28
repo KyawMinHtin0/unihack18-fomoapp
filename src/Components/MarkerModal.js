@@ -126,23 +126,36 @@ const ChatModalContainer = glamorous.div({
 });
 
 export default class MarkerModal extends Component {
+  getDescription = () => {
+    return "Bigsound is not just a music festival, it’s an ideas conference where local and international experts gather to talk about developments, ideas and opportunities in the music industry";
+  };
+
+  getLocation = () => {
+    const { data, activeLocationId } = this.props;
+    return data[activeLocationId];
+  };
+
+  getName = () => {
+    const location = this.getLocation();
+    return location.meta_data.name;
+  };
+
   render() {
-    const { show } = this.props;
+    const { show, activeLocationId } = this.props;
+    const desc = this.getDescription();
 
     return (
       <ModalContainer>
         <CSSTransition in={show} timeout={500} classNames="fade" unmountOnExit>
           <Modal height={MODAL_HEIGHT.LARGE} width={MODAL_WIDTH.SMALL}>
             <Cover>
-              <CoverTitle>Big Sound 2018</CoverTitle>
+              <CoverTitle>{this.getName()}</CoverTitle>
             </Cover>
             <Description>
-              {" "}
-              Bigsound is not just a music festival, it’s an ideas conference,
-              where local and international experts gather to talk about
-              developments, ideas and opportunities in the music industry.{" "}
+              {desc}
               <Text type="EXPAND_BUTTON">more info</Text>
             </Description>
+            {activeLocationId}
           </Modal>
         </CSSTransition>
 
