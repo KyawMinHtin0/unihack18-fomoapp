@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MapGL, { Marker } from "react-map-gl";
 import glamorous from "glamorous";
 import { CSSTransition } from "react-transition-group";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import { MELB_LAT, MELB_LONG, MODAL_HEIGHT } from "./Utils/Constants";
 import { Data } from "./Utils/LocationV1";
@@ -11,6 +12,8 @@ import { FadeOverlay } from "./Components/FadeOverlay";
 import MarkerModal from "./Components/MarkerModal";
 import ChatBox from "./Components/ChatBox";
 import ChatControls from "./Components/ChatControls";
+import MobileMap from "./MobileComponents/MobileMap";
+import MobileModal from "./MobileComponents/MobileModal";
 
 require("dotenv").config();
 
@@ -59,6 +62,13 @@ class App extends Component {
       longitude: MELB_LONG,
       zoom: 15
     },
+    mobViewport: {
+      width: 1080,
+      height: 1920,
+      latitude: MELB_LAT,
+      longitude: MELB_LONG,
+      zoom: 15
+    },
     interactive: true,
     show: false,
     activeLocationId: 0
@@ -98,7 +108,7 @@ class App extends Component {
     return markers;
   };
 
-  render() {
+  renderDesktop() {
     const { interactive, show, activeLocationId } = this.state;
     const allMarkers = this.renderAllMarkers();
     console.log(Data);
@@ -140,11 +150,36 @@ class App extends Component {
           show={!interactive}
         />
         {/* //<MarkerModal show={true} /> */}
-
+        Yo this is desktop
         <ChatBox />
         <ChatControls />
       </div>
     );
+  }
+
+  renderMobile() {
+    const { interactive, show, activeLocationId } = this.state;
+    const allMarkers = this.renderAllMarkers();
+
+    console.log(Data);
+    return (
+      <div className="App">
+        This is mobile
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={MobileMap} />
+            <Route path="/view/:number" component={MobileModal} />
+            {/*<Route path="/schedule" component={Schedule} /> */}
+          </Switch>
+        </BrowserRouter>
+      </div>
+    );
+  }
+
+  render() {
+    const isMobile = false;
+    if (isMobile) return this.renderMobile();
+    else return this.renderDesktop();
   }
 }
 
