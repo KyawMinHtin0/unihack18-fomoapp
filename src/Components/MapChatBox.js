@@ -2,19 +2,10 @@ import React, { Component } from "react";
 import glamorous, { Div } from "glamorous";
 import { Text } from "./Text";
 import { COLORS } from "../Utils/Constants";
-// const firebase = require("firebase");
-// // Required for side-effects
-// // require("firebase/firestore");
-// // var config = {
-// //   apiKey: "AIzaSyAnlBdqeCk9h3Ny0MkpCbWbGU1bAliO_Ak",
-// //   authDomain: "fomo-app-unihack.firebaseapp.com",
-// //   databaseURL: "https://fomo-app-unihack.firebaseio.com",
-// //   projectId: "fomo-app-unihack",
-// //   storageBucket: "fomo-app-unihack.appspot.com",
-// //   messagingSenderId: "921653242032"
-// // };
-// // firebase.initializeApp(config);
-// // var db = firebase.firestore();
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
+var db = firebase.firestore();
 
 const ChatBoxContainer = glamorous.div({
   display: "flex",
@@ -48,39 +39,35 @@ export default class MapChatBox extends Component {
     };
   }
 
-  scrollToBottom = () => {
-    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
-  };
+  componentDidMount() {
+    db.collection("Melbourne4-chat")
+      .doc("locations")
+      .collection(this.props.name)
+      .doc("chat")
+      .onSnapshot(
+        function(doc) {
+          console.log("Current data: ", doc.data());
+          let messageArray = [];
+          let data = doc.data();
+          for (const message in data) {
+            messageArray.push({
+              user: message.split("|")[0],
+              text: data[message]["message"],
+              time: data[message]["time"]
+            });
+          }
+          messageArray.sort(function(a, b) {
+            return a.time - b.time;
+          });
+          setTimeout(this.flipShow, 1000);
+          this.setState({show: true, messages: [messageArray[messageArray.length-1]] });
+        }.bind(this)
+      );
+  }
 
-  componentDidMount() {}
-
-  componentDidUpdate() {}
-
-  // componentDidMount() {
-  //   db.collection("Melbourne4-chat")
-  //     .doc("locations")
-  //     .collection(this.props.name)
-  //     .doc("chat")
-  //     .onSnapshot(
-  //       function(doc) {
-  //         console.log("Current data: ", doc.data());
-  //         let messageArray = [];
-  //         let data = doc.data();
-  //         for (const message in data) {
-  //           messageArray.push({
-  //             user: message.split("|")[0],
-  //             text: data[message]["message"],
-  //             time: data[message]["time"]
-  //           });
-  //         }
-  //         messageArray.sort(function(a, b) {
-  //           return a.time - b.time;
-  //         });
-  //         this.setState({ messages: messageArray });
-  //       }.bind(this)
-  //     );
-  //   this.scrollToBottom();
-  // }
+  flipShow = () => {
+    this.setState({show: false})
+  }
 
   getMessages = () => {
     return this.state.messages;
@@ -102,12 +89,7 @@ export default class MapChatBox extends Component {
   render() {
     const messagelist = this.getMessages();
 
-    const Message = this.renderMessage({
-      time: 0,
-      id: 0,
-      user: "haz",
-      text: "Hello!"
-    });
+    const Message = messagelist.map(item => this.renderMessage(item));
 
     return Message;
   }
