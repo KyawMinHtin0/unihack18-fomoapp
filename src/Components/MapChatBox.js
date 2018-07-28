@@ -77,7 +77,7 @@ export default class MapChatBox extends Component {
           setTimeout(this.flipShow, 1000);
           this.state.first ?
             this.setState({first: false, show: false, messages: [messageArray[messageArray.length-1]] }) :
-            this.setState({show: false, messages: [messageArray[messageArray.length-1]] });
+            this.setState({show: true, messages: [messageArray[messageArray.length-1]] });
         }.bind(this)
       );
   }
