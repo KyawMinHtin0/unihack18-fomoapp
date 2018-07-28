@@ -3,6 +3,7 @@ import glamorous, { Div } from "glamorous";
 import { Text } from "./Text";
 import { COLORS } from "../Utils/Constants";
 import Heart from "../Images/heartbutton.png";
+import Send from "../Images/airplane.png";
 
 const MessageInputContainer = glamorous.div({
   display: "flex",
@@ -45,7 +46,7 @@ export default class ChatControls extends Component {
         <MessageInputBox />
         <ButtonContainer>
           <img
-            src={Heart}
+            src={Send}
             style={{
               maxWidth: "100%",
               maxHeight: "100%"
