@@ -59,15 +59,26 @@ const Modal = glamorous.div(
   }
 );
 
-const Cover = glamorous.div({
-  display: "flex",
-  height: "150px",
-  width: "300px",
-  backgroundImage: `linear-gradient(to bottom, ${COLORS.NAVY}20, ${
-    COLORS.NAVY
-  })`,
-  backgroundSize: "cover"
-});
+const Cover = glamorous.div(
+  {
+    display: "flex",
+    height: "150px",
+    width: "300px",
+    backgroundImage: `linear-gradient(to bottom, ${COLORS.NAVY}20, ${
+      COLORS.NAVY
+    })`,
+    backgroundSize: "cover",
+    backgroundPosition: "center "
+  },
+  props => {
+    const imgUrl = props.imgUrl;
+    return {
+      backgroundImage: `linear-gradient(to bottom, ${COLORS.NAVY}20, ${
+        COLORS.NAVY
+      }), url(${imgUrl})`
+    };
+  }
+);
 
 const CoverTitle = glamorous.div({
   color: "white",
@@ -124,11 +135,6 @@ const ChatModalContainer = glamorous.div({
   flexDirection: "column"
 });
 
-const CoverImage = glamorous.img({
-  top: 0,
-  width: "100%"
-});
-
 export default class MarkerModal extends Component {
   getDescription = () => {
     return "Bigsound is not just a music festival, it’s an ideas conference where local and international experts gather to talk about developments, ideas and opportunities in the music industry";
@@ -161,10 +167,8 @@ export default class MarkerModal extends Component {
       <ModalContainer>
         <CSSTransition in={show} timeout={500} classNames="fade" unmountOnExit>
           <Modal height={MODAL_HEIGHT.LARGE} width={MODAL_WIDTH.SMALL}>
-            <Cover>
+            <Cover imgUrl={imgUrl}>
               <CoverTitle>{name}</CoverTitle>
-
-              <CoverImage src={imgUrl} />
             </Cover>
             <Description>
               {desc}
