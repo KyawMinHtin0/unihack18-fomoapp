@@ -57,7 +57,7 @@ class App extends Component {
   state = {
     viewport: {
       width: 2000,
-      height: 700,
+      height: 1000,
       latitude: MELB_LAT,
       longitude: MELB_LONG,
       zoom: 15
@@ -134,8 +134,6 @@ class App extends Component {
 
           {allMarkers}
         </MapGL>
-        <TrendingMarker onClick={() => this.setState({ show: !show })} />
-        <DebugText>{JSON.stringify(this.state)}</DebugText>
         {/* <ModalContainer>
           <Modal height={MODAL_HEIGHT.LARGE}>
             <h1>BIG SOUND</h1>
