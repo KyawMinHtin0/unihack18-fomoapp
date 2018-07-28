@@ -11,5 +11,6 @@ export const MODAL_WIDTH = {
 };
 
 export const COLORS = {
-  NAVY: "#293B86"
+  NAVY: "#293B86",
+  BLUE: "#4A90E2"
 };
