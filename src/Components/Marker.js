@@ -8,7 +8,7 @@ export const TrendingMarker = glamorous.div({
   borderStyle: "solid",
   borderColor: "#407899",
   borderWidth: "5px",
-  boxShadow: "1px 1px 1px grey",
+  boxShadow: "1px 1px 1px lightgrey",
   transition: "border-color 0.3s, background-color 0.1s, transform 0.3s",
   zIndex: 100,
   ":hover": {
@@ -19,6 +19,6 @@ export const TrendingMarker = glamorous.div({
   },
   ":active": {
     backgroundColor: "#00A08750",
-    boxShadow: "0px 0px 0px grey"
+    boxShadow: "0px 0px 0px lightgrey"
   }
 });

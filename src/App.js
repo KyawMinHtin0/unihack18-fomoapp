@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import MapGL, { Marker, FlyToInterpolator } from "react-map-gl";
+import MapGL, { Marker } from "react-map-gl";
 import glamorous, { Div } from "glamorous";
-import { MELB_LAT, MELB_LONG } from "./Utils/Constants";
+import { MELB_LAT, MELB_LONG, MODAL_HEIGHT } from "./Utils/Constants";
 import { TrendingMarker } from "./Components/Marker";
 import { FadeOverlay } from "./Components/FadeOverlay";
 
@@ -13,9 +13,21 @@ const DebugText = glamorous.div({
   wordWrap: "break-word"
 });
 
-const Modal = glamorous.div({
-  width: "300px"
-});
+const Modal = glamorous.div(
+  {
+    width: "300px",
+    backgroundColor: "white",
+    borderRadius: "10px",
+    boxShadow: "2px 2px 2px lightgrey",
+    margin: "30px"
+  },
+  props => {
+    const height = props.height;
+    return {
+      height: height
+    };
+  }
+);
 
 class App extends Component {
   state = {
@@ -61,6 +73,9 @@ class App extends Component {
         </MapGL>
         <TrendingMarker onClick={this.gotoMelb} />
         <DebugText>{JSON.stringify(this.state)}</DebugText>
+        <Modal height={MODAL_HEIGHT.SMALL} />
+        <Modal height={MODAL_HEIGHT.MEDIUM} />
+        <Modal height={MODAL_HEIGHT.LARGE} />
       </div>
     );
   }
