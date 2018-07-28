@@ -6,8 +6,11 @@ import { Text } from "./Text";
 import ChatBox from "./ChatBox";
 import { MODAL_HEIGHT, MODAL_WIDTH, COLORS } from "../Utils/Constants";
 import InstaBadge from "../Images/insta.png";
-import TwitteBadge from "../Images/twitter.png";
+import SkyBadge from "../Images/castle.png";
 import NewsBadge from "../Images/news.png";
+import DrinkBadge from "../Images/drink.png";
+import FunBadge from "../Images/fun.png";
+
 import ChatControls from "./ChatControls";
 
 const ModalContainer = glamorous.div({
@@ -157,11 +160,97 @@ export default class MarkerModal extends Component {
     else return location.insta10[0].url;
   };
 
+  getBadges = () => {
+    const photoBadges = [
+      {
+        label: "fun",
+        badgeName: "fun",
+        badgeText: "Fun!",
+        badgeDescription:
+          "Google Image Analysis identified that instagram posts about this place are fun!",
+        imgUrl: FunBadge
+      },
+      {
+        label: "sky",
+        badgeName: "view",
+        badgeText: "Beautiful views!",
+        badgeDescription:
+          "Google Image Analysis identified that instagram posts feature spectacular skylines!",
+        imgUrl: SkyBadge
+      },
+      {
+        label: "drink",
+        badgeName: "drink",
+        badgeText: "Great drinks!",
+        badgeDescription:
+          "Google Image Analysis identified that instagram posts feature cool drinks!",
+        imgUrl: DrinkBadge
+      }
+    ];
+
+    const instaBadge = {
+      badgeName: "insta",
+      badgeText: "Insta-famous!",
+      badgeDescription: "Very high number of instagram posts about this place!",
+      imgUrl: InstaBadge
+    };
+
+    const newsBadge = {
+      badgeName: "news",
+      badgeText: "In the news!",
+      badgeDescription: "Featured in the news!",
+      imgUrl: NewsBadge
+    };
+    var badges = [];
+    const location = this.getLocation();
+    const { labels, news, insta10 } = location;
+
+    for (var i = 0; i < labels.length; i++) {
+      for (var j = 0; j < photoBadges.length; j++) {
+        if (photoBadges[j].label === labels[i]) {
+          badges.push(photoBadges[j]);
+        }
+      }
+    }
+
+    if (news > 0) {
+      badges.push(newsBadge);
+    }
+
+    if (insta10[0].points > 1000) {
+      badges.push(instaBadge);
+    }
+    return badges;
+  };
+
+  renderBadge = badge => {
+    return (
+      <Badge>
+        <IconContainer>
+          <img
+            src={badge.imgUrl}
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
+          />
+        </IconContainer>
+        <Text type="TINY">{badge.badgeText}</Text>
+      </Badge>
+    );
+  };
+
+  renderBadges = () => {
+    const badges = this.getBadges();
+    const renders = badges.map(badge => this.renderBadge(badge));
+    return renders;
+  };
+
   render() {
     const { show, activeLocationId } = this.props;
     const desc = this.getDescription();
     const imgUrl = this.getImageUrl();
     const name = this.getName();
+    const badges = this.getBadges();
+
+    const badgesRender = this.renderBadges();
 
     return (
       <ModalContainer>
@@ -174,7 +263,7 @@ export default class MarkerModal extends Component {
               {desc}
               <Text type="EXPAND_BUTTON">more info</Text>
             </Description>
-            {activeLocationId}
+            {JSON.stringify(badges)}
           </Modal>
         </CSSTransition>
 
@@ -191,7 +280,8 @@ export default class MarkerModal extends Component {
               delay="0.1s"
             >
               <AllBadgesContainer>
-                <Badge>
+                {badgesRender}
+                {/* <Badge>
                   <IconContainer>
                     <img
                       src={InstaBadge}
@@ -219,8 +309,8 @@ export default class MarkerModal extends Component {
                       }}
                     />
                   </IconContainer>
-                  <Text type="TINY">In the news!</Text>
-                </Badge>
+                  <Text type="TINY">In the news!</Text> 
+                </Badge>*/}
               </AllBadgesContainer>
               <Text type="EXPAND_BUTTON">more info</Text>
             </Modal>
