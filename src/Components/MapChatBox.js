@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import glamorous, { Div } from "glamorous";
 import { Text } from "./Text";
 import { COLORS } from "../Utils/Constants";
+import { CSSTransition } from "react-transition-group";
 const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");
 var db = firebase.firestore();
-import { CSSTransition } from "react-transition-group";
 
 const ChatBoxContainer = glamorous.div({
   display: "flex",
@@ -49,7 +49,8 @@ export default class MapChatBox extends Component {
     super(props);
     this.state = {
       messages: [],
-      show: false
+      show: false,
+      first: true
     };
   }
 
@@ -74,7 +75,9 @@ export default class MapChatBox extends Component {
             return a.time - b.time;
           });
           setTimeout(this.flipShow, 1000);
-          this.setState({show: true, messages: [messageArray[messageArray.length-1]] });
+          this.state.first ?
+            this.setState({first: false, show: false, messages: [messageArray[messageArray.length-1]] }) :
+            this.setState({show: false, messages: [messageArray[messageArray.length-1]] });
         }.bind(this)
       );
   }
