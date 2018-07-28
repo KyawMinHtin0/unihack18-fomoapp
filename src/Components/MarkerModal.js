@@ -5,7 +5,6 @@ import { Text } from "./Text";
 
 import ChatBox from "./ChatBox";
 import { MODAL_HEIGHT, MODAL_WIDTH, COLORS } from "../Utils/Constants";
-import CoverImage from "../Images/crowd.jpeg";
 import InstaBadge from "../Images/insta.png";
 import TwitteBadge from "../Images/twitter.png";
 import NewsBadge from "../Images/news.png";
@@ -66,7 +65,7 @@ const Cover = glamorous.div({
   width: "300px",
   backgroundImage: `linear-gradient(to bottom, ${COLORS.NAVY}20, ${
     COLORS.NAVY
-  }), url(${CoverImage})`,
+  })`,
   backgroundSize: "cover"
 });
 
@@ -125,24 +124,53 @@ const ChatModalContainer = glamorous.div({
   flexDirection: "column"
 });
 
+const CoverImage = glamorous.img({
+  top: 0,
+  width: "100%"
+});
+
 export default class MarkerModal extends Component {
+  getDescription = () => {
+    return "Bigsound is not just a music festival, it’s an ideas conference where local and international experts gather to talk about developments, ideas and opportunities in the music industry";
+  };
+
+  getLocation = () => {
+    const { data, activeLocationId } = this.props;
+    return data[activeLocationId];
+  };
+
+  getName = () => {
+    const location = this.getLocation();
+    return location.meta_data.name;
+  };
+
+  getImageUrl = () => {
+    const location = this.getLocation();
+    const { activeLocationId } = this.props;
+    if (activeLocationId === 0) return location.insta10[1].url;
+    else return location.insta10[0].url;
+  };
+
   render() {
-    const { show } = this.props;
+    const { show, activeLocationId } = this.props;
+    const desc = this.getDescription();
+    const imgUrl = this.getImageUrl();
+    const name = this.getName();
 
     return (
       <ModalContainer>
         <CSSTransition in={show} timeout={500} classNames="fade" unmountOnExit>
           <Modal height={MODAL_HEIGHT.LARGE} width={MODAL_WIDTH.SMALL}>
             <Cover>
-              <CoverTitle>Big Sound 2018</CoverTitle>
+              <CoverTitle>{name}</CoverTitle>
+
+              <CoverImage src={imgUrl} />
             </Cover>
             <Description>
-              {" "}
-              Bigsound is not just a music festival, it’s an ideas conference,
-              where local and international experts gather to talk about
-              developments, ideas and opportunities in the music industry.{" "}
+              {desc}
               <Text type="EXPAND_BUTTON">more info</Text>
             </Description>
+            {activeLocationId}
           </Modal>
         </CSSTransition>
 
@@ -205,8 +233,8 @@ export default class MarkerModal extends Component {
               delay="0.1s"
             >
               <ChatModalContainer>
-                <ChatBox />
-                <ChatControls />
+                <ChatBox name={name} />
+                <ChatControls name={name} />
               </ChatModalContainer>
             </Modal>
           </CSSTransition>
