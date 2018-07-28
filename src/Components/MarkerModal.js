@@ -263,7 +263,6 @@ export default class MarkerModal extends Component {
               {desc}
               <Text type="EXPAND_BUTTON">more info</Text>
             </Description>
-            {JSON.stringify(badges)}
           </Modal>
         </CSSTransition>
 
