@@ -55,12 +55,32 @@ export default class ChatControls extends Component {
 
   onSend = () => {
     console.log(this.user, this.state.message)
-    var chatRef = db.collection("Melbourne4-chat").doc("locations").collection("ACMI").doc("chat");
+    var chatRef = db.collection("Melbourne4-chat").doc("locations").collection(this.props.name).doc("chat");
     // Set the "capital" field of the city 'DC'
     let timestamp = Math.round((new Date()).getTime() / 1000)
     return chatRef.update({
         [`${this.user}|${timestamp}`]: {
           "message": this.state.message,
+          "time": timestamp
+        }
+    })
+    .then(function() {
+        console.log("Document successfully updated!");
+    })
+    .catch(function(error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+  }
+
+  onHeart = () => {
+    console.log(this.user, this.state.message)
+    var chatRef = db.collection("Melbourne4-chat").doc("locations").collection(this.props.name).doc("chat");
+    // Set the "capital" field of the city 'DC'
+    let timestamp = Math.round((new Date()).getTime() / 1000)
+    return chatRef.update({
+        [`${this.user}|${timestamp}`]: {
+          "message": "♥️",
           "time": timestamp
         }
     })
@@ -86,7 +106,7 @@ export default class ChatControls extends Component {
             }}
           />
         </ButtonContainer>
-        <ButtonContainer>
+        <ButtonContainer onClick={this.onHeart}>
           <img
             src={Heart}
             style={{

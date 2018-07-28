@@ -48,7 +48,7 @@ export default class ChatBox extends Component {
   }
 
   componentDidMount(){
-    db.collection("Melbourne4-chat").doc("locations").collection("ACMI").doc("chat")
+    db.collection("Melbourne4-chat").doc("locations").collection(this.props.name).doc("chat")
     .onSnapshot(function(doc) {
         console.log("Current data: ", doc.data());
         let messageArray = [];
@@ -61,7 +61,7 @@ export default class ChatBox extends Component {
           })
         }
         messageArray.sort(function(a, b) {
-          return b.time - a.time;
+          return a.time - b.time;
         })
         this.setState({messages:messageArray});
     }.bind(this));
@@ -74,7 +74,7 @@ export default class ChatBox extends Component {
   renderMessage = message => {
     console.log(message);
     return (
-      <MessageContainer key={`${message.time}`}>
+      <MessageContainer key={`${message.time}`} id={`${this.props.name}`}>
         <Text type="MESSAGE">
           <span>
             <b>{message.user}:</b> {message.text}
