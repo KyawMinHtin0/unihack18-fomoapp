@@ -26,17 +26,10 @@ const ChatBoxContainer = glamorous.div({
 });
 
 const MessageContainer = glamorous.div({
-  display: "flex",
-  borderRadius: "100px",
+  borderRadius: "10px",
   backgroundColor: COLORS.BLUE,
-  padding: "5px 10px",
-  minHeight: "20px",
-  width: "fit-content",
-  marginBottom: "10px",
-  transition: "0.2s",
-  ":hover": {
-    transform: "scale(1.02)"
-  }
+  padding: "5px",
+  marginBottom: "5px"
 });
 
 export default class ChatBox extends Component {
