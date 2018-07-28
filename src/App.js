@@ -184,7 +184,7 @@ class App extends Component {
   }
 
   render() {
-    const isMobile = true; //this.isMobileDevice();
+    const isMobile = this.isMobileDevice();
     if (isMobile) return this.renderMobile();
     else return this.renderDesktop();
   }
