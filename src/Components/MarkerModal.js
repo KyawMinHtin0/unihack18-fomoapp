@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import glamorous, { Div } from "glamorous";
-import posed from "react-pose";
 import { CSSTransition } from "react-transition-group";
+import { Text } from "./Text";
 
+import ChatBox from "./ChatBox";
 import { MODAL_HEIGHT, MODAL_WIDTH, COLORS } from "../Utils/Constants";
 import CoverImage from "../Images/crowd.jpeg";
-import BadgeImage from "../Images/badge.png";
 import InstaBadge from "../Images/insta.png";
 import TwitteBadge from "../Images/twitter.png";
 import NewsBadge from "../Images/news.png";
-
-import { Text } from "./Text";
+import ChatControls from "./ChatControls";
 
 const ModalContainer = glamorous.div({
   position: "absolute",
-  top: "30vh",
+  top: "10vh",
   left: "30vh",
   display: "flex"
 });
@@ -36,7 +35,6 @@ const Modal = glamorous.div(
     fontFamily: "'Josefin Sans', sans-serif",
     transition: "opacity 300ms ease-in-out",
     opacity: 1,
-    display: "flex",
     ".fade-enter": {
       opacity: 0
     },
@@ -120,10 +118,11 @@ const IconContainer = glamorous.div({
   maxWidth: "64px"
 });
 
-// ANIMATIONS -------------------------
-const SlipIn = posed.div({
-  initialPose: { opacity: 0 },
-  finalPose: { opasit: 1 }
+const ChatModalContainer = glamorous.div({
+  display: "flex",
+  height: "auto",
+  padding: "20px 50px",
+  flexDirection: "column"
 });
 
 export default class MarkerModal extends Component {
@@ -204,7 +203,12 @@ export default class MarkerModal extends Component {
               height={MODAL_HEIGHT.MEDIUM}
               width={MODAL_WIDTH.LARGE}
               delay="0.1s"
-            />
+            >
+              <ChatModalContainer>
+                <ChatBox />
+                <ChatControls />
+              </ChatModalContainer>
+            </Modal>
           </CSSTransition>
         </ModalVerticalContainer>
       </ModalContainer>

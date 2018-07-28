@@ -12,6 +12,11 @@ const FONTSTYLES = {
     fontSize: "12pt",
     fontWeight: "300"
   },
+  MESSAGE: {
+    color: "white",
+    fontSize: "12pt",
+    fontWeight: "300"
+  },
   HEADING_WHITE: {
     color: "white",
     fontSize: "28pt",

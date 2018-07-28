@@ -7,6 +7,8 @@ import { MELB_LAT, MELB_LONG, MODAL_HEIGHT } from "./Utils/Constants";
 import { TrendingMarker } from "./Components/Marker";
 import { FadeOverlay } from "./Components/FadeOverlay";
 import MarkerModal from "./Components/MarkerModal";
+import ChatBox from "./Components/ChatBox";
+import ChatControls from "./Components/ChatControls";
 
 require("dotenv").config();
 
@@ -50,10 +52,10 @@ class App extends Component {
   state = {
     viewport: {
       width: 2000,
-      height: 1400,
+      height: 700,
       latitude: MELB_LAT,
       longitude: MELB_LONG,
-      zoom: 13
+      zoom: 15
     },
     interactive: true,
     show: false
@@ -74,7 +76,7 @@ class App extends Component {
       <div className="App">
         <MapGL
           {...this.state.viewport}
-          mapStyle="mapbox://styles/khtin/cjk46q8hh4fen2sqz98wylqrd"
+          mapStyle="mapbox://styles/khtin/cjk47b0i254wq2rnwa42zv48d" //"mapbox://styles/khtin/cjk46q8hh4fen2sqz98wylqrd"
           mapboxApiAccessToken={process.env.REACT_APP_MapboxAccessToken}
           onViewportChange={viewport => this.setState({ viewport })}
           dragPan={interactive}
@@ -101,6 +103,10 @@ class App extends Component {
           </ModalVerticalContainer>
         </ModalContainer> */}
         <MarkerModal show={!interactive} />
+        <MarkerModal show={true} />
+
+        <ChatBox />
+        <ChatControls />
       </div>
     );
   }
