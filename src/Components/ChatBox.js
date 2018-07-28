@@ -2,29 +2,19 @@ import React, { Component } from "react";
 import glamorous, { Div } from "glamorous";
 import { Text } from "./Text";
 import { COLORS } from "../Utils/Constants";
-
-const messages = [
-  {
-    user: "Jon",
-    text: "Hi I love this place!"
-  },
-  {
-    user: "Tom",
-    text: "Hey whats up!"
-  },
-  {
-    user: "Jane",
-    text: "Best food in the CBD!"
-  },
-  {
-    user: "Jane",
-    text: "Best food in the CBD!"
-  },
-  {
-    user: "Jane",
-    text: "Best food in the CBD!"
-  }
-];
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
+var config = {
+  apiKey: "AIzaSyAnlBdqeCk9h3Ny0MkpCbWbGU1bAliO_Ak",
+  authDomain: "fomo-app-unihack.firebaseapp.com",
+  databaseURL: "https://fomo-app-unihack.firebaseio.com",
+  projectId: "fomo-app-unihack",
+  storageBucket: "fomo-app-unihack.appspot.com",
+  messagingSenderId: "921653242032"
+};
+firebase.initializeApp(config);
+var db = firebase.firestore();
 
 const ChatBoxContainer = glamorous.div({
   display: "flex",
@@ -50,14 +40,41 @@ const MessageContainer = glamorous.div({
 });
 
 export default class ChatBox extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      messages: []
+    }
+  }
+
+  componentDidMount(){
+    db.collection("Melbourne4-chat").doc("locations").collection("ACMI").doc("chat")
+    .onSnapshot(function(doc) {
+        console.log("Current data: ", doc.data());
+        let messageArray = [];
+        let data = doc.data();
+        for(const message in data){
+          messageArray.push({
+            user: message.split("|")[0],
+            text: data[message]["message"],
+            time: data[message]["time"]
+          })
+        }
+        messageArray.sort(function(a, b) {
+          return b.time - a.time;
+        })
+        this.setState({messages:messageArray});
+    }.bind(this));
+  }
+
   getMessages = () => {
-    return messages;
+    return this.state.messages;
   };
 
   renderMessage = message => {
     console.log(message);
     return (
-      <MessageContainer>
+      <MessageContainer key={`${message.time}`}>
         <Text type="MESSAGE">
           <span>
             <b>{message.user}:</b> {message.text}
