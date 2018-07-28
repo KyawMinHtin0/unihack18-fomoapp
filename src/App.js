@@ -14,6 +14,7 @@ import ChatBox from "./Components/ChatBox";
 import ChatControls from "./Components/ChatControls";
 import MobileMap from "./MobileComponents/MobileMap";
 import MobileModal from "./MobileComponents/MobileModal";
+import MapChatBox from "./Components/MapChatBox";
 
 require("dotenv").config();
 
@@ -51,6 +52,9 @@ const DebugText = glamorous.div({
 //   }
 // );
 
+const MarkerContainer = glamorous.div({
+  display: "flex"
+});
 const Box = glamorous.div({});
 
 class App extends Component {
@@ -96,7 +100,10 @@ class App extends Component {
     const { lat, lng, name } = location.meta_data;
     return (
       <Marker latitude={lat} longitude={lng} offsetLeft={-20} offsetTop={-10}>
-        <TrendingMarker onClick={() => this.toggleModal(index)} />
+        <MarkerContainer>
+          <TrendingMarker onClick={() => this.toggleModal(index)} />
+          <MapChatBox name={name} />
+        </MarkerContainer>
         {name}
       </Marker>
     );
