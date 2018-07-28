@@ -13,6 +13,10 @@ const DebugText = glamorous.div({
   wordWrap: "break-word"
 });
 
+const Modal = glamorous.div({
+  width: "300px"
+});
+
 class App extends Component {
   state = {
     viewport: {
@@ -22,20 +26,20 @@ class App extends Component {
       longitude: MELB_LONG,
       zoom: 13
     },
-    dragPan: true
+    interactive: true
   };
 
   toggleDrag = () => {
-    const { dragPan } = this.state;
+    const { interactive } = this.state;
     console.log("here");
     const viewport = {
-      dragPan: !dragPan
+      interactive: !interactive
     };
     this.setState(viewport);
   };
 
   render() {
-    const { dragPan } = this.state;
+    const { interactive } = this.state;
     return (
       <div className="App">
         <MapGL
@@ -43,7 +47,7 @@ class App extends Component {
           mapStyle="mapbox://styles/khtin/cjk46q8hh4fen2sqz98wylqrd"
           mapboxApiAccessToken={process.env.REACT_APP_MapboxAccessToken}
           onViewportChange={viewport => this.setState({ viewport })}
-          dragPan={dragPan}
+          dragPan={interactive}
         >
           <Marker
             latitude={MELB_LAT}
@@ -52,7 +56,7 @@ class App extends Component {
             offsetTop={-10}
           >
             <TrendingMarker onClick={this.toggleDrag} />
-            <FadeOverlay display={!dragPan} onClick={this.toggleDrag} />
+            <FadeOverlay display={!interactive} onClick={this.toggleDrag} />
           </Marker>
         </MapGL>
         <TrendingMarker onClick={this.gotoMelb} />
