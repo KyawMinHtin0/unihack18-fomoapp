@@ -20,7 +20,7 @@ const MessageInputBox = glamorous.input({
   display: "flex",
   height: "25px",
   padding: "5px",
-  width: "150px",
+  width: "200px",
   borderColor: COLORS.NAVY,
   borderRadius: "5px",
   borderWidth: "2px",
@@ -38,9 +38,9 @@ const MessageInputBox = glamorous.input({
 const ButtonContainer = glamorous.div({
   display: "flex",
   height: "auto",
-  width: "50px",
-  maxHeight: "50px",
-  maxWidth: "50px",
+  width: "40px",
+  maxHeight: "40px",
+  maxWidth: "40px",
   ":hover": {
     transform: "scale(1.1)"
   }
