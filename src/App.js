@@ -123,7 +123,6 @@ class App extends Component {
     console.log(Data);
     return (
       <div className="App">
-        Desktop
         <MapGL
           {...this.state.viewport}
           mapStyle="mapbox://styles/khtin/cjk47b0i254wq2rnwa42zv48d" //"mapbox://styles/khtin/cjk46q8hh4fen2sqz98wylqrd"

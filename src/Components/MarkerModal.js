@@ -140,6 +140,12 @@ const ChatModalContainer = glamorous.div({
 });
 
 export default class MarkerModal extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      badgeInfo: ""
+    }
+  }
   getDescription = () => {
     const location = this.getLocation();
     return location.meta_data.description;
@@ -228,7 +234,10 @@ export default class MarkerModal extends Component {
   renderBadge = badge => {
     return (
       <Badge>
-        <IconContainer>
+        <IconContainer onClick={() => {
+          this.setState({badgeInfo: badge.badgeDescription});
+          setTimeout(() => this.setState({badgeInfo: ""}), 1500);
+        }}>
           <img
             src={badge.imgUrl}
             style={{ maxWidth: "100%", maxHeight: "100%" }}
@@ -313,7 +322,7 @@ export default class MarkerModal extends Component {
                   <Text type="TINY">In the news!</Text>
                 </Badge>*/}
               </AllBadgesContainer>
-              <Text type="EXPAND_BUTTON">more info</Text>
+              <Text style={{margin: 'auto', textAlign: "center"}} type="TINY">{this.state.badgeInfo}</Text>
             </Modal>
           </CSSTransition>
           <CSSTransition

@@ -66,6 +66,7 @@ export const Data = [
       ],
       "meta_data":{
          "address":"Queen St, Melbourne VIC 3000, Australia",
+         "description":"The Queen Victoria Market is a major landmark in Melbourne, Australia, and at around seven hectares is the largest open air market in the Southern Hemisphere.",
          "lat":-37.8075798,
          "lng":144.956785,
          "name":"Queen Victoria Market",
@@ -110,7 +111,7 @@ export const Data = [
       ],
       "news_count":4,
       "points":27593,
-      "score":0.34204651488709914,
+      "score":0.2949257204444205,
       "sentiment":0.5
    },
    {
@@ -180,6 +181,7 @@ export const Data = [
       ],
       "meta_data":{
          "address":"17 Market Lane, Melbourne",
+         "description":"Cantonese meals in a sprawling, red-carpeted restaurant with panels of Chinese art lining the walls.",
          "lat":-37.81191539999999,
          "lng":144.9691713,
          "name":"Flower Drum Restaurant Melbourne",
@@ -195,7 +197,7 @@ export const Data = [
       ],
       "news_count":0,
       "points":18304,
-      "score":0.20909059754857723,
+      "score":0.17895271987798678,
       "sentiment":0.5
    },
    {
@@ -418,7 +420,7 @@ export const Data = [
       ],
       "news_count":20,
       "points":4124,
-      "score":0.18133754239336675,
+      "score":0.1661052750155013,
       "sentiment":0.5
    },
    {
@@ -662,7 +664,172 @@ export const Data = [
       ],
       "news_count":20,
       "points":3663,
-      "score":0.17607143851061466,
+      "score":0.16159821623797987,
+      "sentiment":0.5
+   },
+   {
+      "insta10":[
+         {
+            "points":1743,
+            "timestamp":1531694961,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/cad22d6ce45e461c76bf99030b5ac57f/5C0A5F6D/t51.2885-15/e35/36875165_289272121810834_2542540611106373632_n.jpg?se=8&ig_cache_key=MTgyNDMxMjAyMzE4MDA3NjY2NQ%3D%3D.2"
+         },
+         {
+            "points":1743,
+            "timestamp":1531694961,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/cad22d6ce45e461c76bf99030b5ac57f/5C0A5F6D/t51.2885-15/e35/36875165_289272121810834_2542540611106373632_n.jpg?se=8&ig_cache_key=MTgyNDMxMjAyMzE4MDA3NjY2NQ%3D%3D.2"
+         },
+         {
+            "points":578,
+            "timestamp":1532534957,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/104c4c779ee22da0cd6b6ca4e7f7315d/5C0C1858/t51.2885-15/e35/37146967_869672549909980_3073432662342369280_n.jpg?se=7&ig_cache_key=MTgzMTM1ODQxODI4MDQwNzM1Mg%3D%3D.2"
+         },
+         {
+            "points":578,
+            "timestamp":1532534957,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/104c4c779ee22da0cd6b6ca4e7f7315d/5C0C1858/t51.2885-15/e35/37146967_869672549909980_3073432662342369280_n.jpg?se=7&ig_cache_key=MTgzMTM1ODQxODI4MDQwNzM1Mg%3D%3D.2"
+         },
+         {
+            "points":386,
+            "timestamp":1532261894,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/594f454e47f6b40a0d79c712329d08b6/5C06C6C8/t51.2885-15/e35/37103561_215162652519909_6097886453944025088_n.jpg?se=7&ig_cache_key=MTgyOTA2Nzc5NzA4OTIzNjQ4MA%3D%3D.2"
+         },
+         {
+            "points":337,
+            "timestamp":1531260566,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/d5e638268684742e9afe58122a6cb15d/5C0A49B1/t51.2885-15/e35/36582305_2039313276320924_8569905243943337984_n.jpg?se=7&ig_cache_key=MTgyMDY2ODA0OTAwMTE3MDEyNg%3D%3D.2"
+         },
+         {
+            "points":334,
+            "timestamp":1531098949,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/c9a4fc021a8fdb2847be5257b6fc2168/5BD97FF8/t51.2885-15/e35/36631206_241747269938524_5959541253782634496_n.jpg?ig_cache_key=MTgxOTMxMDk3MTg5OTIxNjA3MQ%3D%3D.2"
+         },
+         {
+            "points":334,
+            "timestamp":1531098949,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/c9a4fc021a8fdb2847be5257b6fc2168/5BD97FF8/t51.2885-15/e35/36631206_241747269938524_5959541253782634496_n.jpg?ig_cache_key=MTgxOTMxMDk3MTg5OTIxNjA3MQ%3D%3D.2"
+         },
+         {
+            "points":246,
+            "timestamp":1530930332,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/9132871a7b0753c6ce8748063401509f/5BF9A45D/t51.2885-15/e35/36086185_213878942591267_3864596188367945728_n.jpg?se=7&ig_cache_key=MTgxNzg5Nzg1MDI4MjE4NzcyNQ%3D%3D.2"
+         },
+         {
+            "points":166,
+            "timestamp":1532616709,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/acafdec74f4c617aebd4077a308c842f/5BEE2341/t51.2885-15/e35/37288926_232210890947886_1484502098073616384_n.jpg?se=7&ig_cache_key=MTgzMjA0NDE5ODA4MjE0ODgwMw%3D%3D.2"
+         }
+      ],
+      "labels":[
+         "sky",
+         "coast",
+         "promontory",
+         "plant",
+         "sea",
+         "water",
+         "coastal and oceanic landforms",
+         "shore",
+         "wilderness",
+         "tree"
+      ],
+      "meta_data":{
+         "address":"55/57 Gertrude Street, Fitzroy",
+         "description":"Upscale Modern Australian fare and a tasting menu in an old metalworks factory with an open kitchen.",
+         "lat":-37.805421,
+         "lng":144.97595,
+         "name":"Cutler & Co",
+         "types":[
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ]
+      },
+      "news":[
+         {
+            "description":"The DNA didn\u2019t match. The witnesses weren\u2019t sure. But the prosecution persisted.",
+            "sentiment":0.14769527316093445,
+            "timestamp":"2018-07-27T10:00:00Z",
+            "title":"Standing by Their Convictions",
+            "url":"https://features.propublica.org/south-bend/wrongful-conviction-pardon-keith-cooper-christopher-parish-indiana-elkhart-police/",
+            "urlToImage":"https://assets.propublica.org/images/externals/20180727-south-bend-1200x630.jpg"
+         },
+         {
+            "description":"A single course of antibiotics early in childhood may increase risk for Type 1 diabetes. This is the finding of a study in mice led by researchers from NYU Medical School.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-24T04:00:00Z",
+            "title":"Changes in bacterial mix linked to antibiotics increase risk for type 1 diabetes",
+            "url":"https://www.eurekalert.org/pub_releases/2018-07/nlh-cib072418.php",
+            "urlToImage":"https://www.eurekalert.org/images/EurekAlert_StackedLogo_RGB.jpg"
+         },
+         {
+            "description":"The judge also agreed to delay Manafort's trial in Virginia by a week after his lawyer complained about a last-minute production of documents by the government. View Entire Post \u203a",
+            "sentiment":0.5,
+            "timestamp":"2018-07-23T23:49:32Z",
+            "title":"The Judge In Paul Manafort's Case Unsealed The Names Of Witnesses Who Will Get Immunity To Testify",
+            "url":"https://www.buzzfeednews.com/article/zoetillman/the-judge-in-paul-manaforts-case-unsealed-the-names-of",
+            "urlToImage":"https://img.buzzfeed.com/buzzfeed-static/static/2018-07/23/15/campaign_images/buzzfeed-prod-web-04/the-judge-in-paul-manaforts-case-unsealed-the-nam-2-23148-1532375369-0_dblbig.jpg"
+         },
+         {
+            "description":"Look up dining out in Melbourne and one name will keep popping up. Andrew McConnell. Twice named the Good Food Guide's chef of the year, his restaurants are a history of eating in the Victorian capital since 2001, attracting a swag of awards along the way. Mo\u2026",
+            "sentiment":0.5,
+            "timestamp":"2018-07-24T12:37:02Z",
+            "title":"10 things one of Australia's best chefs, Cumulus Inc's Andrew McConnell, learnt from business",
+            "url":"https://www.businessinsider.com.au/chef-cumulus-inc-andrew-mcconnell-business-tips-2018-7",
+            "urlToImage":"https://edge.alluremedia.com.au/uploads/businessinsider/2018/07/Andrew-McConnell-crop2-by-Kristoffer_Paulsen-640x360.jpg"
+         },
+         {
+            "description":"Your vote can be bought, but at what cost? 'Dark Money' follows local Montana journalist John S. Adams, who is determined to uncover the truth about funding in his state\u2019s elections....",
+            "sentiment":0.9214190244674683,
+            "timestamp":"2018-07-26T18:58:33Z",
+            "title":"PRESS RELEASE: Dark Money | The Haunting Truth of Corporate Spending in Politics",
+            "url":"http://www.pbs.org/pov/blog/pressroom/2018/07/darkmoney-press-release/",
+            "urlToImage":"http://www.pbs.org/pov/blog/wp-content/uploads/2018/07/1-John-S-Adams-silhouetted-in-the-Montana-Capitol-building-from-DARK-MONEY-a-PBS-Distribution-release-1200x675.jpg"
+         },
+         {
+            "description":"Hogan Lovells brings in $1.3M from ZTE work \u2014 Mercury adds Arnavat",
+            "sentiment":0.5,
+            "timestamp":"2018-07-23T18:55:18Z",
+            "title":"Trade helps propel second-quarter business",
+            "url":"https://www.politico.com/newsletters/politico-influence/2018/07/23/trade-helps-propel-second-quarter-business-294338",
+            "urlToImage":"https://static.politico.com/da/f5/44342c424c68b675719324b1106b/politico.jpg"
+         },
+         {
+            "description":"WAYNE, N.J., July 23, 2018 /PRNewswire/ -- Toys\"R\"Us, Inc. (the \"Company) today announced that one of its subsidiaries, Toys\"R\"Us Property Company I, LLC (\"Propco I\"), has retained the services of Raider Hill Advisors (\"Raider Hill\"), a private real estate in\u2026",
+            "sentiment":0.5,
+            "timestamp":"2018-07-23T12:00:00Z",
+            "title":"Toys\"R\"Us Property Company I, LLC Retains Raider Hill Advisors",
+            "url":"https://www.prnewswire.com/news-releases/toysrus-property-company-i-llc-retains-raider-hill-advisors-300684698.html",
+            "urlToImage":"/content/dam/prnewswire/common/prn_facebook_sharing_logo.jpg"
+         },
+         {
+            "description":"NEW YORK, July 24, 2018 /PRNewswire/ -- A single course of antibiotics early in childhood may increase risk for Type 1 diabetes. This is the finding of a study in mice led by researchers from NYU Medical School and published online July 24 in the journal eLif\u2026",
+            "sentiment":0.5,
+            "timestamp":"2018-07-24T15:55:00Z",
+            "title":"Changes in Bacterial Mix Linked to Antibiotics Increase Risk for Type 1 Diabetes in Animal Model",
+            "url":"https://www.prnewswire.comchanges-in-bacterial-mix-linked-to-antibiotics-increase-risk-for-type-1-diabetes-in-animal-model-300685707",
+            "urlToImage":"https://mma.prnewswire.com/media/237434/nyu_langone_medical_center_logo.jpg?p=facebook"
+         },
+         {
+            "description":"There's more to the story of Keith Cooper and Chris Parish, who spent years in prison for a crime they didn't commit. It's a story about Elkhart County justice.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-27T10:00:00Z",
+            "title":"Justice in Elkhart County: DNA didn't match. Witnesses weren't sure. But the prosecution persisted.",
+            "url":"https://www.southbendtribune.com/news/publicsafety/elkhartjustice/justice-in-elkhart-county-dna-didn-t-match-witnesses-weren/article_5b832451-db61-5dfc-897c-97cf58ea1ec9.html",
+            "urlToImage":"https://bloximages.newyork1.vip.townnews.com/southbendtribune.com/content/tncms/assets/v3/editorial/f/15/f15752a0-9143-11e8-9bff-331e297a8675/5b5a823595730.image.jpg?resize=765%2C630"
+         },
+         {
+            "description":"Add link to new minutes",
+            "sentiment":0.9222691059112549,
+            "timestamp":"2018-07-26T01:51:32Z",
+            "title":"FoundationBoard/Minutes",
+            "url":"https://wiki.gnome.org/action/diff/FoundationBoard/Minutes?action=diff&rev1=374&rev2=373",
+            "urlToImage":null
+         }
+      ],
+      "news_count":10,
+      "points":8839,
+      "score":0.14930933454736584,
       "sentiment":0.5
    },
    {
@@ -908,7 +1075,7 @@ export const Data = [
       ],
       "news_count":20,
       "points":479,
-      "score":0.13969990974123803,
+      "score":0.13046920290256087,
       "sentiment":0.5
    },
    {
@@ -1152,220 +1319,7 @@ export const Data = [
       ],
       "news_count":20,
       "points":442,
-      "score":0.1392772506443577,
-      "sentiment":0.5
-   },
-   {
-      "insta10":[
-         {
-            "points":394,
-            "timestamp":1526378979,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/05244600091756a7c07b65d1c84c4656/5C08CA4A/t51.2885-15/e35/31487872_192825811342513_104955338423271424_n.jpg?se=7&ig_cache_key=MTc3OTcwODc2OTQ4ODM4NDg0MA%3D%3D.2"
-         },
-         {
-            "points":189,
-            "timestamp":1532418787,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/6077201a3e5ac67cc9af4c4a0a630959/5BEF649C/t51.2885-15/e35/36933342_214800019203491_4303628114732253184_n.jpg?se=7&ig_cache_key=MTgzMDM4MzkxNTE3NDk0MDIxMw%3D%3D.2"
-         },
-         {
-            "points":168,
-            "timestamp":1531371552,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/dff6e264001eb9b78d2ee9df6d1742fe/5BF1AF9A/t51.2885-15/e35/36515362_264210670827087_8334668051190382592_n.jpg?se=7&ig_cache_key=MTgyMTU5OTA2NTMxMDQzNTI1Ng%3D%3D.2"
-         },
-         {
-            "points":167,
-            "timestamp":1532392098,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/8d6dc41489b32e01f117f2f059e39b91/5BF24966/t51.2885-15/e35/36963213_233415533964966_2537756361136013312_n.jpg?se=7&ig_cache_key=MTgzMDE2MDAyNDk2MjQzMDE3NA%3D%3D.2"
-         },
-         {
-            "points":124,
-            "timestamp":1532420482,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/b3d866a697739def3bd3878f51b833e6/5BD5C105/t51.2885-15/e35/36977115_941365296035445_1875354142168317952_n.jpg?se=7&ig_cache_key=MTgzMDM5ODEzMTExNDUzOTA5Nw%3D%3D.2"
-         },
-         {
-            "points":107,
-            "timestamp":1532577397,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/e0837510a08fdbc13dac7e76fcffa48e/5BDC5FA8/t51.2885-15/e35/37095539_1858145484487848_8060944085994700800_n.jpg?se=7&ig_cache_key=MTgzMTcxNDQyNTEzNDY2NTYwNA%3D%3D.2"
-         },
-         {
-            "points":91,
-            "timestamp":1532178646,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/2c5dbf566dc732ce3efea7f0aafae202/5BDC0CB1/t51.2885-15/e35/36553521_403444396845682_8749166789352488960_n.jpg?se=7&ig_cache_key=MTgyODM2OTQ2MDY1NjMzODM0NA%3D%3D.2"
-         },
-         {
-            "points":64,
-            "timestamp":1531282974,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/37bbe8ea757c63684313cd73824d4bad/5BEFC6D1/t51.2885-15/e35/36665776_412273279291874_7002187596163973120_n.jpg?se=7&ig_cache_key=MTgyMDg1NjAyNTQ0MjI5MDY0MQ%3D%3D.2"
-         },
-         {
-            "points":64,
-            "timestamp":1531332037,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/198b7e95f565ae533209d86d9f2c4438/5C07C4A5/t51.2885-15/e35/36500934_421743338229274_7310009530060898304_n.jpg?se=7&ig_cache_key=MTgyMTI2NzU5MDY5MDEzNzk1OQ%3D%3D.2"
-         },
-         {
-            "points":62,
-            "timestamp":1531197731,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/bf4f939169c2129e6a706b0782fcaf56/5BD56E97/t51.2885-15/e35/36136015_1872312132790852_6765520346805174272_n.jpg?se=7&ig_cache_key=MTgyMDE0MDk1MzE0Nzg5OTU0Mw%3D%3D.2"
-         }
-      ],
-      "labels":[
-         "food",
-         "dish",
-         "cuisine",
-         "breakfast",
-         "meal",
-         "brunch",
-         "cup",
-         "product",
-         "lunch",
-         "full breakfast"
-      ],
-      "meta_data":{
-         "address":"8 Rankins Lane, Melbourne",
-         "lat":-37.8138766,
-         "lng":144.9621256,
-         "name":"Manchester Press",
-         "types":[
-            "cafe",
-            "store",
-            "food",
-            "point_of_interest",
-            "establishment"
-         ]
-      },
-      "news":[
-         {
-            "description":"London North Eastern Railway, Northern and Transpennine Express trains all affected Rail services in northern England have been disrupted after lightning struck signal boxes in York and Doncaster. All services running through Leeds and York were affected, inc\u2026",
-            "sentiment":0.5,
-            "timestamp":"2018-07-27T13:19:40Z",
-            "title":"Lightning strikes disrupt rail services in northern England",
-            "url":"https://www.theguardian.com/uk-news/2018/jul/27/lightning-strikes-disrupt-rail-services-in-northern-england",
-            "urlToImage":"https://i.guim.co.uk/img/media/06bece8b118c3c03c42d48449d61e7c916fcba87/0_0_3500_2100/master/3500.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly9hc3NldHMuZ3VpbS5jby51ay9pbWFnZXMvb3ZlcmxheXMvZDM1ODZhNWVmNTc4MTc1NmQyMWEzYjYzNWU1MTcxNDEvdGctZGVmYXVsdC5wbmc=&s=974774086dac974c3b5dc84dd1f363ea"
-         },
-         {
-            "description":"Imran Khan in front but rigging claims blight count \u2026 alarm at rise in police custody deaths \u2026 and why rightwingers are afraid of \u2018snowflakes\u2019 Hello, it\u2019s Warren Murray, and this Thursday morning we are looking first at the unsettled outcome of the Pakistani \u2026",
-            "sentiment":0.2022801637649536,
-            "timestamp":"2018-07-26T05:22:55Z",
-            "title":"Thursday briefing: Death and dispute in Pakistani poll",
-            "url":"https://www.theguardian.com/world/2018/jul/26/thursday-briefing-death-and-dispute-in-pakistani-poll",
-            "urlToImage":"https://i.guim.co.uk/img/media/5f162115c25e17235fb5e7ff90308dbbfcdf2e06/765_0_3219_1932/master/3219.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly9hc3NldHMuZ3VpbS5jby51ay9pbWFnZXMvb3ZlcmxheXMvZDM1ODZhNWVmNTc4MTc1NmQyMWEzYjYzNWU1MTcxNDEvdGctZGVmYXVsdC5wbmc=&s=8a42cbf87504756c7411d87f011d038c"
-         },
-         {
-            "description":"And you're maybe (probably) sexist. Or at least contributing to sexism on and off the pitch.",
-            "sentiment":0.20416077971458435,
-            "timestamp":"2018-07-24T19:19:09Z",
-            "title":"If You Watch Only Men\u2019s Soccer, You\u2019re Not A Real Soccer Fan",
-            "url":"https://www.huffingtonpost.com/entry/opinion-luther-womens-world-cup-sexism_us_5b573017e4b0de86f490b06a",
-            "urlToImage":"https://img.huffingtonpost.com/asset/5b573c8d1900002b014ff046.jpeg?cache=z7doo5vstm&ops=1910_1000"
-         },
-         {
-            "description":"On the day of the Overwatch League Season 1 finals at a sold-out Barclay's Center, here's the inside story of how Blizzard courted traditional sports owners to buy in to the most ambitious new venture in esports.",
-            "sentiment":0.5,
-            "timestamp":"2018-07-27T18:43:16Z",
-            "title":"How Blizzard convinced sports billionaires to buy into the Overwatch League",
-            "url":"http://www.espn.com/esports/story/_/id/24203693/how-blizzard-convinced-robert-kraft-other-billionaires-buy-overwatch-league",
-            "urlToImage":"http://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0726%2Fr406083_1296x729_16%2D9.jpg"
-         },
-         {
-            "description":"Xherdan Shaqiri scored on a spectacular bicycle kick in the 82nd minute, capping a three-goal second half for Liverpool in a 4-1 victory over Manchester United",
-            "sentiment":0.817618191242218,
-            "timestamp":"2018-07-28T23:11:00Z",
-            "title":"Shaqiri's goal highlights Liverpool's 4-1 win",
-            "url":"https://www.usatoday.com/story/sports/soccer/2018/07/28/shaqiris-goal-highlights-liverpools-4-1-win/37180593/?utm_source=google&utm_medium=amp&utm_campaign=speakable",
-            "urlToImage":"https://www.gannett-cdn.com/-mm-/8181d5048eab08d924bd3846d5285282c79115e8/c=0-286-4383-2751/local/-/media/2018/07/28/USATODAY/usatsports/33aba57127cc4826b02578e53351dc36.jpg?width=3200&height=1680&fit=crop"
-         },
-         {
-            "description":"\u201cMovin\u2019 on Up\u201d (Est. 2006) \"The Social Mobility Foundation (SMF) is a charity which aims to make practical improvement in social mobility for young people from low-income backgrounds. It runs free of charge programmes of mentoring, internships, university app\u2026",
-            "sentiment":0.8352890014648438,
-            "timestamp":"2018-07-25T16:04:36Z",
-            "title":"Noted: New Logo and Identity for Social Mobility Foundation by Jones Knowles Ritchie",
-            "url":"https://www.underconsideration.com/brandnew/archives/new_logo_and_identity_for_social_mobility_foundation_by_jones_knowles_ritchie.php",
-            "urlToImage":"https://www.underconsideration.com/brandnew/archives/social_mobility_foundation_logo_before_after.png"
-         },
-         {
-            "description":"Things are far from stable in the evolving specialty film market, as film festivals and award season loom.",
-            "sentiment":0.838394820690155,
-            "timestamp":"2018-07-26T17:21:39Z",
-            "title":"From Amazon Studios to Searchlight, Big Changes in Little Specialty Arena",
-            "url":"https://www.indiewire.com/2018/07/amazon-studios-changes-specialty-market-box-office-1201987918/",
-            "urlToImage":"https://www.indiewire.com/wp-content/uploads/2018/02/9135977gi.jpg?w=780"
-         },
-         {
-            "description":"",
-            "sentiment":0.5,
-            "timestamp":"2018-07-22T12:15:01Z",
-            "title":"Didier Deschamps Praises Paul Pogba for 'Freeing Himself' From Media Scrutiny During World Cup",
-            "url":"https://www.si.com/soccer/2018/07/22/didier-deschamps-praises-paul-pogba-freeing-himself-media-scrutiny-during-world-cup",
-            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/france-v-croatia-2018-fifa-world-cup-russia-final-5b5461173467ac749f000006.jpg&w=1200&h=628&c=sc&poi=face&q=85"
-         },
-         {
-            "description":"",
-            "sentiment":0.1732107400894165,
-            "timestamp":"2018-07-28T14:30:01Z",
-            "title":"Jurgen Klopp Gives Interesting Response When Asked About Potential Nabil Fekir Transfer",
-            "url":"https://www.si.com/soccer/2018/07/28/jurgen-klopp-gives-interesting-response-when-asked-about-potential-nabil-fekir-transfer",
-            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/france-v-croatia-2018-fifa-world-cup-russia-final-5b5c7849347a02f424000056.jpg&w=1200&h=628&c=sc&poi=face&q=85"
-         },
-         {
-            "description":"",
-            "sentiment":0.5,
-            "timestamp":"2018-07-27T12:30:01Z",
-            "title":"Karim Benzema Insists He's 'Really Happy' at Real Madrid Despite Links With Move Away From Bernabeu",
-            "url":"https://www.si.com/soccer/2018/07/27/karim-benzema-insists-hes-really-happy-real-madrid-despite-links-move-away-bernabeu",
-            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/fbl-eur-c1-liverpool-real-madrid-5b5b09f23467accd4b000015.jpg&w=1200&h=628&c=sc&poi=face&q=85"
-         },
-         {
-            "description":"",
-            "sentiment":0.5,
-            "timestamp":"2018-07-24T08:30:01Z",
-            "title":"How Leicester Manager Claude Puel Has Quietly Started to Prove His Doubters Wrong This Summer",
-            "url":"https://www.si.com/soccer/2018/07/24/how-leicester-manager-claude-puel-has-quietly-started-prove-his-doubters-wrong-summer",
-            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/notts-county-v-leicester-city-pre-season-friendly-5b549a95347a02f3df0000b2.jpg&w=1200&h=628&c=sc&poi=face&q=85"
-         },
-         {
-            "description":"Initial results suggest Khan's PTI party will emerge as the largest single party in the national government.",
-            "sentiment":0.5,
-            "timestamp":"2018-07-26T00:39:39Z",
-            "title":"Pakistan's Imran Khan leads polls as rivals cry foul",
-            "url":"https://www.aljazeera.com/news/2018/07/pakistan-imran-khan-leads-polls-rivals-cry-foul-180725222052144.html",
-            "urlToImage":"https://www.aljazeera.com/mritems/Images/2018/7/25/9c87f30ee2564105b4e1cc2bdd16e317_18.jpg"
-         },
-         {
-            "description":"Arsenal midfielder says he has been subject to 'racism', echoing the views of other European players of foreign descent.",
-            "sentiment":0.5,
-            "timestamp":"2018-07-23T09:28:15Z",
-            "title":"Mesut Ozil: Twitter reacts as star quits Germany over 'racism'",
-            "url":"https://www.aljazeera.com/news/2018/07/twitter-istandwithozil-star-quits-germany-racism-180723063103544.html",
-            "urlToImage":"https://www.aljazeera.com/mritems/Images/2018/7/23/e3cbe872f0fd488b82acaf5e6f7dc45f_18.jpg"
-         },
-         {
-            "description":"Counting under way after a day of voting in Pakistan's historic general elections.",
-            "sentiment":0.5,
-            "timestamp":"2018-07-25T15:45:42Z",
-            "title":"Pakistan elections: Millions vote in violence-marred elections",
-            "url":"https://www.aljazeera.com/news/2018/07/pakistan-elections-millions-votes-violence-marred-elections-180725151741285.html",
-            "urlToImage":"https://www.aljazeera.com/mritems/Images/2018/7/25/aa3ce06d82004eb7b5ba812ddee9318e_18.jpg"
-         },
-         {
-            "description":"Burnley were held up by a delayed flight on Wednesday as they travelled to the Europa League qualifier against Aberdeen.",
-            "sentiment":0.8454046249389648,
-            "timestamp":"2018-07-25T17:43:00Z",
-            "title":"Burnley held up by delayed flight",
-            "url":"http://www.skysports.com/football/news/11708/11448674/burnley-held-up-by-delayed-flight-ahead-of-europa-league-tie-against-aberdeen",
-            "urlToImage":"http://e2.365dm.com/18/03/150x150/skysports-sean-dyche-burnley_4245551.jpg"
-         },
-         {
-            "description":"Born in the United States, making his name in Germany. So how did England play a part in Christian Pulisic's development? Michael Hincks talks with Mark Pulisic to discuss his son's journey from Hershey to Dortmund, via a little town outside Oxford.",
-            "sentiment":0.5,
-            "timestamp":"2018-07-26T05:00:00Z",
-            "title":"The making of Pulisic",
-            "url":"http://www.skysports.com/football/news/11096/11448254/christian-pulisic-the-making-of-borussia-dortmunds-19-year-old-midfielder-who-is-turning-heads-across-europe",
-            "urlToImage":"http://e1.365dm.com/18/07/150x150/skysports-christian-pulisic_4371014.jpg"
-         }
-      ],
-      "news_count":16,
-      "points":2412,
-      "score":0.13493535416463343,
+      "score":0.13010746499633896,
       "sentiment":0.5
    },
    {
@@ -1389,8 +1343,8 @@ export const Data = [
          "stemware"
       ],
       "meta_data":{
-         "Mezzo":"Smart Italian restaurant with creatively-presented dishes, central bar, and muralled wall interior.",
          "address":"35 Little Bourke Street, Melbourne",
+         "description":"Smart Italian restaurant with creatively-presented dishes, central bar, and muralled wall interior.",
          "lat":-37.8109346,
          "lng":144.971855,
          "name":"Mezzo",
@@ -1566,7 +1520,221 @@ export const Data = [
       ],
       "news_count":20,
       "points":48,
-      "score":0.13477650242352404,
+      "score":0.12625544513008422,
+      "sentiment":0.5
+   },
+   {
+      "insta10":[
+         {
+            "points":394,
+            "timestamp":1526378979,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/05244600091756a7c07b65d1c84c4656/5C08CA4A/t51.2885-15/e35/31487872_192825811342513_104955338423271424_n.jpg?se=7&ig_cache_key=MTc3OTcwODc2OTQ4ODM4NDg0MA%3D%3D.2"
+         },
+         {
+            "points":189,
+            "timestamp":1532418787,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/6077201a3e5ac67cc9af4c4a0a630959/5BEF649C/t51.2885-15/e35/36933342_214800019203491_4303628114732253184_n.jpg?se=7&ig_cache_key=MTgzMDM4MzkxNTE3NDk0MDIxMw%3D%3D.2"
+         },
+         {
+            "points":168,
+            "timestamp":1531371552,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/dff6e264001eb9b78d2ee9df6d1742fe/5BF1AF9A/t51.2885-15/e35/36515362_264210670827087_8334668051190382592_n.jpg?se=7&ig_cache_key=MTgyMTU5OTA2NTMxMDQzNTI1Ng%3D%3D.2"
+         },
+         {
+            "points":167,
+            "timestamp":1532392098,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/8d6dc41489b32e01f117f2f059e39b91/5BF24966/t51.2885-15/e35/36963213_233415533964966_2537756361136013312_n.jpg?se=7&ig_cache_key=MTgzMDE2MDAyNDk2MjQzMDE3NA%3D%3D.2"
+         },
+         {
+            "points":124,
+            "timestamp":1532420482,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/b3d866a697739def3bd3878f51b833e6/5BD5C105/t51.2885-15/e35/36977115_941365296035445_1875354142168317952_n.jpg?se=7&ig_cache_key=MTgzMDM5ODEzMTExNDUzOTA5Nw%3D%3D.2"
+         },
+         {
+            "points":107,
+            "timestamp":1532577397,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/e0837510a08fdbc13dac7e76fcffa48e/5BDC5FA8/t51.2885-15/e35/37095539_1858145484487848_8060944085994700800_n.jpg?se=7&ig_cache_key=MTgzMTcxNDQyNTEzNDY2NTYwNA%3D%3D.2"
+         },
+         {
+            "points":91,
+            "timestamp":1532178646,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/2c5dbf566dc732ce3efea7f0aafae202/5BDC0CB1/t51.2885-15/e35/36553521_403444396845682_8749166789352488960_n.jpg?se=7&ig_cache_key=MTgyODM2OTQ2MDY1NjMzODM0NA%3D%3D.2"
+         },
+         {
+            "points":64,
+            "timestamp":1531282974,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/37bbe8ea757c63684313cd73824d4bad/5BEFC6D1/t51.2885-15/e35/36665776_412273279291874_7002187596163973120_n.jpg?se=7&ig_cache_key=MTgyMDg1NjAyNTQ0MjI5MDY0MQ%3D%3D.2"
+         },
+         {
+            "points":64,
+            "timestamp":1531332037,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/198b7e95f565ae533209d86d9f2c4438/5C07C4A5/t51.2885-15/e35/36500934_421743338229274_7310009530060898304_n.jpg?se=7&ig_cache_key=MTgyMTI2NzU5MDY5MDEzNzk1OQ%3D%3D.2"
+         },
+         {
+            "points":62,
+            "timestamp":1531197731,
+            "url":"https://scontent-syd2-1.cdninstagram.com/vp/bf4f939169c2129e6a706b0782fcaf56/5BD56E97/t51.2885-15/e35/36136015_1872312132790852_6765520346805174272_n.jpg?se=7&ig_cache_key=MTgyMDE0MDk1MzE0Nzg5OTU0Mw%3D%3D.2"
+         }
+      ],
+      "labels":[
+         "food",
+         "dish",
+         "cuisine",
+         "breakfast",
+         "meal",
+         "brunch",
+         "cup",
+         "product",
+         "lunch",
+         "full breakfast"
+      ],
+      "meta_data":{
+         "address":"8 Rankins Lane, Melbourne",
+         "description":"Specialty coffee, brekkie and bagels served in a light, vintage-chic cafe with eclectic decor.",
+         "lat":-37.8138766,
+         "lng":144.9621256,
+         "name":"Manchester Press",
+         "types":[
+            "cafe",
+            "store",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ]
+      },
+      "news":[
+         {
+            "description":"London North Eastern Railway, Northern and Transpennine Express trains all affected Rail services in northern England have been disrupted after lightning struck signal boxes in York and Doncaster. All services running through Leeds and York were affected, inc\u2026",
+            "sentiment":0.5,
+            "timestamp":"2018-07-27T13:19:40Z",
+            "title":"Lightning strikes disrupt rail services in northern England",
+            "url":"https://www.theguardian.com/uk-news/2018/jul/27/lightning-strikes-disrupt-rail-services-in-northern-england",
+            "urlToImage":"https://i.guim.co.uk/img/media/06bece8b118c3c03c42d48449d61e7c916fcba87/0_0_3500_2100/master/3500.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly9hc3NldHMuZ3VpbS5jby51ay9pbWFnZXMvb3ZlcmxheXMvZDM1ODZhNWVmNTc4MTc1NmQyMWEzYjYzNWU1MTcxNDEvdGctZGVmYXVsdC5wbmc=&s=974774086dac974c3b5dc84dd1f363ea"
+         },
+         {
+            "description":"Imran Khan in front but rigging claims blight count \u2026 alarm at rise in police custody deaths \u2026 and why rightwingers are afraid of \u2018snowflakes\u2019 Hello, it\u2019s Warren Murray, and this Thursday morning we are looking first at the unsettled outcome of the Pakistani \u2026",
+            "sentiment":0.2022801637649536,
+            "timestamp":"2018-07-26T05:22:55Z",
+            "title":"Thursday briefing: Death and dispute in Pakistani poll",
+            "url":"https://www.theguardian.com/world/2018/jul/26/thursday-briefing-death-and-dispute-in-pakistani-poll",
+            "urlToImage":"https://i.guim.co.uk/img/media/5f162115c25e17235fb5e7ff90308dbbfcdf2e06/765_0_3219_1932/master/3219.jpg?w=1200&h=630&q=55&auto=format&usm=12&fit=crop&crop=faces%2Centropy&bm=normal&ba=bottom%2Cleft&blend64=aHR0cHM6Ly9hc3NldHMuZ3VpbS5jby51ay9pbWFnZXMvb3ZlcmxheXMvZDM1ODZhNWVmNTc4MTc1NmQyMWEzYjYzNWU1MTcxNDEvdGctZGVmYXVsdC5wbmc=&s=8a42cbf87504756c7411d87f011d038c"
+         },
+         {
+            "description":"And you're maybe (probably) sexist. Or at least contributing to sexism on and off the pitch.",
+            "sentiment":0.20416077971458435,
+            "timestamp":"2018-07-24T19:19:09Z",
+            "title":"If You Watch Only Men\u2019s Soccer, You\u2019re Not A Real Soccer Fan",
+            "url":"https://www.huffingtonpost.com/entry/opinion-luther-womens-world-cup-sexism_us_5b573017e4b0de86f490b06a",
+            "urlToImage":"https://img.huffingtonpost.com/asset/5b573c8d1900002b014ff046.jpeg?cache=z7doo5vstm&ops=1910_1000"
+         },
+         {
+            "description":"On the day of the Overwatch League Season 1 finals at a sold-out Barclay's Center, here's the inside story of how Blizzard courted traditional sports owners to buy in to the most ambitious new venture in esports.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-27T18:43:16Z",
+            "title":"How Blizzard convinced sports billionaires to buy into the Overwatch League",
+            "url":"http://www.espn.com/esports/story/_/id/24203693/how-blizzard-convinced-robert-kraft-other-billionaires-buy-overwatch-league",
+            "urlToImage":"http://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0726%2Fr406083_1296x729_16%2D9.jpg"
+         },
+         {
+            "description":"Xherdan Shaqiri scored on a spectacular bicycle kick in the 82nd minute, capping a three-goal second half for Liverpool in a 4-1 victory over Manchester United",
+            "sentiment":0.817618191242218,
+            "timestamp":"2018-07-28T23:11:00Z",
+            "title":"Shaqiri's goal highlights Liverpool's 4-1 win",
+            "url":"https://www.usatoday.com/story/sports/soccer/2018/07/28/shaqiris-goal-highlights-liverpools-4-1-win/37180593/?utm_source=google&utm_medium=amp&utm_campaign=speakable",
+            "urlToImage":"https://www.gannett-cdn.com/-mm-/8181d5048eab08d924bd3846d5285282c79115e8/c=0-286-4383-2751/local/-/media/2018/07/28/USATODAY/usatsports/33aba57127cc4826b02578e53351dc36.jpg?width=3200&height=1680&fit=crop"
+         },
+         {
+            "description":"\u201cMovin\u2019 on Up\u201d (Est. 2006) \"The Social Mobility Foundation (SMF) is a charity which aims to make practical improvement in social mobility for young people from low-income backgrounds. It runs free of charge programmes of mentoring, internships, university app\u2026",
+            "sentiment":0.8352890014648438,
+            "timestamp":"2018-07-25T16:04:36Z",
+            "title":"Noted: New Logo and Identity for Social Mobility Foundation by Jones Knowles Ritchie",
+            "url":"https://www.underconsideration.com/brandnew/archives/new_logo_and_identity_for_social_mobility_foundation_by_jones_knowles_ritchie.php",
+            "urlToImage":"https://www.underconsideration.com/brandnew/archives/social_mobility_foundation_logo_before_after.png"
+         },
+         {
+            "description":"Things are far from stable in the evolving specialty film market, as film festivals and award season loom.",
+            "sentiment":0.838394820690155,
+            "timestamp":"2018-07-26T17:21:39Z",
+            "title":"From Amazon Studios to Searchlight, Big Changes in Little Specialty Arena",
+            "url":"https://www.indiewire.com/2018/07/amazon-studios-changes-specialty-market-box-office-1201987918/",
+            "urlToImage":"https://www.indiewire.com/wp-content/uploads/2018/02/9135977gi.jpg?w=780"
+         },
+         {
+            "description":"",
+            "sentiment":0.5,
+            "timestamp":"2018-07-22T12:15:01Z",
+            "title":"Didier Deschamps Praises Paul Pogba for 'Freeing Himself' From Media Scrutiny During World Cup",
+            "url":"https://www.si.com/soccer/2018/07/22/didier-deschamps-praises-paul-pogba-freeing-himself-media-scrutiny-during-world-cup",
+            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/france-v-croatia-2018-fifa-world-cup-russia-final-5b5461173467ac749f000006.jpg&w=1200&h=628&c=sc&poi=face&q=85"
+         },
+         {
+            "description":"",
+            "sentiment":0.1732107400894165,
+            "timestamp":"2018-07-28T14:30:01Z",
+            "title":"Jurgen Klopp Gives Interesting Response When Asked About Potential Nabil Fekir Transfer",
+            "url":"https://www.si.com/soccer/2018/07/28/jurgen-klopp-gives-interesting-response-when-asked-about-potential-nabil-fekir-transfer",
+            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/france-v-croatia-2018-fifa-world-cup-russia-final-5b5c7849347a02f424000056.jpg&w=1200&h=628&c=sc&poi=face&q=85"
+         },
+         {
+            "description":"",
+            "sentiment":0.5,
+            "timestamp":"2018-07-27T12:30:01Z",
+            "title":"Karim Benzema Insists He's 'Really Happy' at Real Madrid Despite Links With Move Away From Bernabeu",
+            "url":"https://www.si.com/soccer/2018/07/27/karim-benzema-insists-hes-really-happy-real-madrid-despite-links-move-away-bernabeu",
+            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/fbl-eur-c1-liverpool-real-madrid-5b5b09f23467accd4b000015.jpg&w=1200&h=628&c=sc&poi=face&q=85"
+         },
+         {
+            "description":"",
+            "sentiment":0.5,
+            "timestamp":"2018-07-24T08:30:01Z",
+            "title":"How Leicester Manager Claude Puel Has Quietly Started to Prove His Doubters Wrong This Summer",
+            "url":"https://www.si.com/soccer/2018/07/24/how-leicester-manager-claude-puel-has-quietly-started-prove-his-doubters-wrong-summer",
+            "urlToImage":"https://imagesvc.timeincapp.com/v3/mm/image?url=https://cdn-s3.si.com/images/notts-county-v-leicester-city-pre-season-friendly-5b549a95347a02f3df0000b2.jpg&w=1200&h=628&c=sc&poi=face&q=85"
+         },
+         {
+            "description":"Initial results suggest Khan's PTI party will emerge as the largest single party in the national government.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-26T00:39:39Z",
+            "title":"Pakistan's Imran Khan leads polls as rivals cry foul",
+            "url":"https://www.aljazeera.com/news/2018/07/pakistan-imran-khan-leads-polls-rivals-cry-foul-180725222052144.html",
+            "urlToImage":"https://www.aljazeera.com/mritems/Images/2018/7/25/9c87f30ee2564105b4e1cc2bdd16e317_18.jpg"
+         },
+         {
+            "description":"Arsenal midfielder says he has been subject to 'racism', echoing the views of other European players of foreign descent.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-23T09:28:15Z",
+            "title":"Mesut Ozil: Twitter reacts as star quits Germany over 'racism'",
+            "url":"https://www.aljazeera.com/news/2018/07/twitter-istandwithozil-star-quits-germany-racism-180723063103544.html",
+            "urlToImage":"https://www.aljazeera.com/mritems/Images/2018/7/23/e3cbe872f0fd488b82acaf5e6f7dc45f_18.jpg"
+         },
+         {
+            "description":"Counting under way after a day of voting in Pakistan's historic general elections.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-25T15:45:42Z",
+            "title":"Pakistan elections: Millions vote in violence-marred elections",
+            "url":"https://www.aljazeera.com/news/2018/07/pakistan-elections-millions-votes-violence-marred-elections-180725151741285.html",
+            "urlToImage":"https://www.aljazeera.com/mritems/Images/2018/7/25/aa3ce06d82004eb7b5ba812ddee9318e_18.jpg"
+         },
+         {
+            "description":"Burnley were held up by a delayed flight on Wednesday as they travelled to the Europa League qualifier against Aberdeen.",
+            "sentiment":0.8454046249389648,
+            "timestamp":"2018-07-25T17:43:00Z",
+            "title":"Burnley held up by delayed flight",
+            "url":"http://www.skysports.com/football/news/11708/11448674/burnley-held-up-by-delayed-flight-ahead-of-europa-league-tie-against-aberdeen",
+            "urlToImage":"http://e2.365dm.com/18/03/150x150/skysports-sean-dyche-burnley_4245551.jpg"
+         },
+         {
+            "description":"Born in the United States, making his name in Germany. So how did England play a part in Christian Pulisic's development? Michael Hincks talks with Mark Pulisic to discuss his son's journey from Hershey to Dortmund, via a little town outside Oxford.",
+            "sentiment":0.5,
+            "timestamp":"2018-07-26T05:00:00Z",
+            "title":"The making of Pulisic",
+            "url":"http://www.skysports.com/football/news/11096/11448254/christian-pulisic-the-making-of-borussia-dortmunds-19-year-old-midfielder-who-is-turning-heads-across-europe",
+            "urlToImage":"http://e1.365dm.com/18/07/150x150/skysports-christian-pulisic_4371014.jpg"
+         }
+      ],
+      "news_count":16,
+      "points":2412,
+      "score":0.12421033162321016,
       "sentiment":0.5
    },
    {
@@ -1724,146 +1892,7 @@ export const Data = [
       ],
       "news_count":9,
       "points":5203,
-      "score":0.11983769216019892,
-      "sentiment":0.5
-   },
-   {
-      "insta10":[
-         {
-            "points":13,
-            "timestamp":1530261437,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/a22d17c9e005b1001c80659899e1f8bb/5BDABA46/t51.2885-15/e35/35432193_433362113796437_4887762917031673856_n.jpg?se=7&ig_cache_key=MTgxMjI4Njc1MTM3MDk0MzI4Mw%3D%3D.2"
-         },
-         {
-            "points":11,
-            "timestamp":1532430406,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/27940c01e64b97f9c020b7af14538743/5BEDDC75/t51.2885-15/e35/36988914_1947139968916948_9210540929432158208_n.jpg?se=8&ig_cache_key=MTgzMDQ4MTM3OTczNDYyNDMzMw%3D%3D.2"
-         },
-         {
-            "points":8,
-            "timestamp":1532387791,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/72749c53aecbf5755cf6e20967bc10cf/5C110C3E/t51.2885-15/e35/36986472_280004896100942_5555536671207849984_n.jpg?se=7&ig_cache_key=MTgzMDEyMjY0ODgyNDY5NDMwMQ%3D%3D.2"
-         },
-         {
-            "points":7,
-            "timestamp":1532239771,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/c7c0ed93cb39538b742c0c9ca9f4a7c2/5BF26205/t51.2885-15/e35/36965555_245878456227601_190043416560664576_n.jpg?se=7&ig_cache_key=MTgyODg4MjIxODI3MDE3MTQ0Mw%3D%3D.2"
-         },
-         {
-            "points":5,
-            "timestamp":1532335246,
-            "url":"https://scontent-syd2-1.cdninstagram.com/vp/fec97ff3565986132fd8eb643f56704f/5BD5A881/t51.2885-15/e35/36967870_185547258978640_4898831034868563968_n.jpg?se=7&ig_cache_key=MTgyOTY4MzExNTk4ODMwNjQxMg%3D%3D.2"
-         }
-      ],
-      "labels":[
-         "advertising",
-         "fun",
-         "product",
-         "poster",
-         "font",
-         "community",
-         "banner",
-         "communication",
-         "girl",
-         "human behavior"
-      ],
-      "meta_data":{
-         "address":"380 Lygon St, Carlton VIC 3053, Australia",
-         "description":"Movie theater in Carlton, Australia",
-         "lat":-37.797992,
-         "lng":144.967931,
-         "name":"Cinema Nova",
-         "types":[
-            "movie_theater",
-            "point_of_interest",
-            "establishment"
-         ]
-      },
-      "news":[
-         {
-            "description":"by Stranger Things To Do Staff Over 100 floats, marching bands, and performers will celebrate Seattle in the annual Seafair Torchlight Parade on Saturday night. Courtesy of Seafair Panicking because you haven't yet made plans for the weekend and you're short \u2026",
-            "sentiment":0.8523299694061279,
-            "timestamp":"2018-07-27T22:15:00Z",
-            "title":"Last-Minute Plans: 145 Cheap & Easy Things To Do This Weekend: July 27-29, 2018",
-            "url":"https://www.thestranger.com/things-to-do/2018/07/27/29831591/last-minute-plans-145-cheap-and-easy-things-to-do-this-weekend-july-27-29-2018",
-            "urlToImage":"https://media2.fdncms.com/stranger/imager/u/large/29837010/torchlight_parade_0499.jpg"
-         },
-         {
-            "description":"It was a pretty epic Round Table, albeit one held in vain. Federico Fellini, Jean-Luc Godard, Yves-Saint Laurent and other creative power-houses had joined forces with one impossible goal: to save Sergei Parajanov. \u201cIn the temple of cinema, there are images, \u2026",
-            "sentiment":0.9047133922576904,
-            "timestamp":"2018-07-27T15:04:02Z",
-            "title":"He made the Most Beautiful Films of All Time and they Put Him in Prison For it",
-            "url":"http://www.messynessychic.com/2018/07/27/he-made-the-most-beautiful-films-of-all-time-and-they-put-him-in-prison-for-it/",
-            "urlToImage":"http://static.messynessychic.com/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-02.50.09.png"
-         },
-         {
-            "description":"Anna May Wong, Clara Bows, Joan Crawford, Katharine Hepburn, etc., here is our list of 30 classic beauties from the 1930s with the most beau...",
-            "sentiment":0.5,
-            "timestamp":"2018-07-27T00:50:00Z",
-            "title":"Top 30 of Classic Beauties With the Most Beautiful Eyes in the 1930s",
-            "url":"https://www.vintag.es/2018/07/1930s-classic-beauties.html",
-            "urlToImage":"https://1.bp.blogspot.com/-v2-7OpEY8UE/W1nGdj6xTgI/AAAAAAABg0w/vLLG7JmI-qAECDM7U9bkGuwkq1XJ-VeRwCLcBGAs/w1200-h630-p-k-no-nu/1930s%2BClassic%2BBeauties%2B%25281%2529.jpg"
-         },
-         {
-            "description":"AACTA has revealed the first nominees for the 8th AACTA Awards presented by Foxtel. The announcement: The first nominees for the 8th AACTA Awards presented by Foxtel have been revealed today, with the Australian Academy of Cinema and Television Arts (AACTA) a\u2026",
-            "sentiment":0.5,
-            "timestamp":"2018-07-24T01:03:19Z",
-            "title":"AACTA reveals nominees for its 8th Awards",
-            "url":"https://mumbrella.com.au/aacta-reveals-nominees-for-its-8th-awards-531109",
-            "urlToImage":"https://mumbrella.com.au/wp-content/uploads/2018/07/AACTA-Awards-2018.png"
-         },
-         {
-            "description":"It has been a while since DC Entertainment rolled out a live-action feature film, but with the Shazam! and Aquaman trailers making huge waves on social media, The Death of Superman coming soon, and Justice League Dark #1 in comic shops this week, Cinema Sins \u2026",
-            "sentiment":0.5,
-            "timestamp":"2018-07-27T03:26:00Z",
-            "title":"Everything Wrong With 'Justice League Dark' According To CinemaSins",
-            "url":"http://comicbook.com/movies/2018/07/27/everything-wrong-with-justice-league-dark-cinemasins/",
-            "urlToImage":"http://media.comicbook.com/2017/01/justice-league-dark-226018-640x320.jpg"
-         },
-         {
-            "description":"The plush accommodation appears on the top 10 list of the 'most Instagram-worthy'\u00a0 halls by British student accommodation website My Student Halls.",
-            "sentiment":0.8829910755157471,
-            "timestamp":"2018-07-25T15:01:41Z",
-            "title":"Are these the most Instagram-friendly student halls EVER?",
-            "url":"http://www.dailymail.co.uk/femail/article-5990701/Are-Instagram-friendly-student-halls-EVER.html",
-            "urlToImage":"https://i.dailymail.co.uk/i/newpix/2018/07/25/15/4E8E873400000578-0-image-a-28_1532530597270.jpg"
-         },
-         {
-            "description":"Nova released latest promo video showing off its luxurious student residence in Nottinghams. Looking more like a 5-star hotel, the university hall offers a 24/7 assistance and concierge, a private cinema, a gym and a party room.",
-            "sentiment":0.7957891225814819,
-            "timestamp":"2018-07-25T17:28:48Z",
-            "title":"Video: Nova shows luxurious student residence in Nottingham in new promo clip",
-            "url":"http://www.dailymail.co.uk/video/femail/video-1733548/Video-Nova-shows-luxurious-student-residence-Nottingham-new-promo-clip.html",
-            "urlToImage":"https://i.dailymail.co.uk/i/newpix/2018/07/25/18/4E90D72300000578-0-image-m-57_1532540105302.jpg"
-         },
-         {
-            "description":"Diretor faleceu em 1999 The post Cineastas homenageiam Stanley Kubrick em seu anivers\u00e1rio de 90 anos appeared first on Jovem Nerd.",
-            "sentiment":0.5,
-            "timestamp":"2018-07-26T13:43:03Z",
-            "title":"Cineastas homenageiam Stanley Kubrick em seu anivers\u00e1rio de 90 anos",
-            "url":"https://jovemnerd.com.br/nerdbunker/cineastas-homenageiam-stanley-kubrick-em-seu-aniversario-de-90-anos/",
-            "urlToImage":"https://jovemnerd.com.br/wp-content/uploads/2018/07/kubrick.png"
-         },
-         {
-            "description":"O showrunner de Star Trek Discovery Alex Kurtzman afirmou que o ator que viver aacute Spock na s eacute rie",
-            "sentiment":0.5,
-            "timestamp":"2018-07-23T12:51:00Z",
-            "title":"Showrunner diz j\u00e1 ter escolhido ator que far\u00e1 Spock em Star Trek: Discovery",
-            "url":"https://cinema10.com.br/noticias/showrunner-diz-ja-ter-escolhido-ator-que-fara-spock-14357",
-            "urlToImage":"https://img.r7.com/images/spock-23072018100002840"
-         },
-         {
-            "description":"Central European Media Enterprises Ltd. (\u201cCME\u201d or the \u201cCompany\u201d) (NASDAQ/Prague Stock Exchange:CETV) today announced financial results for the three and six months ended June 30, 2018. read more",
-            "sentiment":0.5,
-            "timestamp":"2018-07-24T05:50:05Z",
-            "title":"Central European Media Enterprises Ltd. Reports Results for the Second Quarter and Six Months Ended June 30, 2018",
-            "url":"http://news.sys-con.com/node/4296051",
-            "urlToImage":""
-         }
-      ],
-      "news_count":10,
-      "points":44,
-      "score":0.06761671558845408,
+      "score":0.1074719445598382,
       "sentiment":0.5
    }
 ];
