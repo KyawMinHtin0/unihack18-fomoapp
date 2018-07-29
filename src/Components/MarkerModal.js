@@ -140,7 +140,8 @@ const ChatModalContainer = glamorous.div({
 
 export default class MarkerModal extends Component {
   getDescription = () => {
-    return "Bigsound is not just a music festival, it’s an ideas conference where local and international experts gather to talk about developments, ideas and opportunities in the music industry";
+    const location = this.getLocation();
+    return location.meta_data.description;
   };
 
   getLocation = () => {
@@ -308,7 +309,7 @@ export default class MarkerModal extends Component {
                       }}
                     />
                   </IconContainer>
-                  <Text type="TINY">In the news!</Text> 
+                  <Text type="TINY">In the news!</Text>
                 </Badge>*/}
               </AllBadgesContainer>
               <Text type="EXPAND_BUTTON">more info</Text>
