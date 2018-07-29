@@ -135,7 +135,8 @@ const ChatModalContainer = glamorous.div({
   display: "flex",
   height: "auto",
   padding: "20px 50px",
-  flexDirection: "column"
+  flexDirection: "column",
+  justifyContent: "space-between"
 });
 
 export default class MarkerModal extends Component {
