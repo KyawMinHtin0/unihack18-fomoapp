@@ -16,6 +16,7 @@ import MobileMap from "./MobileComponents/MobileMap";
 import MobileModal from "./MobileComponents/MobileModal";
 import MapChatBox from "./Components/MapChatBox";
 import Logo from "./Images/logo.png";
+import { MarkerRadius } from "./Components/MarkerRadius";
 
 require("dotenv").config();
 
@@ -107,9 +108,12 @@ class App extends Component {
     return (
       <Marker latitude={lat} longitude={lng} offsetLeft={-20} offsetTop={-10}>
         <MarkerContainer>
+          <MarkerRadius />
+
           <TrendingMarker onClick={() => this.toggleModal(index)} />
           <MapChatBox name={name} />
         </MarkerContainer>
+
         <Text type="SMALL">
           <b>{name}</b>
         </Text>

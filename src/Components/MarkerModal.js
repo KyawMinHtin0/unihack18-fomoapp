@@ -10,6 +10,7 @@ import SkyBadge from "../Images/castle.png";
 import NewsBadge from "../Images/news.png";
 import DrinkBadge from "../Images/drink.png";
 import FunBadge from "../Images/fun.png";
+import TrendingBadge from "../Images/trending.png";
 
 import ChatControls from "./ChatControls";
 
@@ -140,11 +141,11 @@ const ChatModalContainer = glamorous.div({
 });
 
 export default class MarkerModal extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       badgeInfo: ""
-    }
+    };
   }
   getDescription = () => {
     const location = this.getLocation();
@@ -183,7 +184,7 @@ export default class MarkerModal extends Component {
         badgeName: "view",
         badgeText: "Beautiful views!",
         badgeDescription:
-          "Google Image Analysis identified that instagram posts feature spectacular skylines!",
+          "Instagram posts feature spectacular skylines! (via Google Image Analysis)",
         imgUrl: SkyBadge
       },
       {
@@ -191,7 +192,7 @@ export default class MarkerModal extends Component {
         badgeName: "drink",
         badgeText: "Great drinks!",
         badgeDescription:
-          "Google Image Analysis identified that instagram posts feature cool drinks!",
+          "Lots of people are taking pictures of cool drinks here! (via Google Image Analysis)",
         imgUrl: DrinkBadge
       }
     ];
@@ -228,16 +229,28 @@ export default class MarkerModal extends Component {
     if (insta10[0].points > 1000) {
       badges.push(instaBadge);
     }
-    return badges;
+
+    if (badges.length === 0)
+      return [
+        {
+          badgeName: "trending",
+          badgeText: "Currently Trending!",
+          badgeDescription: "Lots of social media activity about this place!",
+          imgUrl: TrendingBadge
+        }
+      ];
+    else return badges;
   };
 
   renderBadge = badge => {
     return (
       <Badge>
-        <IconContainer onClick={() => {
-          this.setState({badgeInfo: badge.badgeDescription});
-          setTimeout(() => this.setState({badgeInfo: ""}), 1500);
-        }}>
+        <IconContainer
+          onClick={() => {
+            this.setState({ badgeInfo: badge.badgeDescription });
+            setTimeout(() => this.setState({ badgeInfo: "" }), 1500);
+          }}
+        >
           <img
             src={badge.imgUrl}
             style={{ maxWidth: "100%", maxHeight: "100%" }}
@@ -322,7 +335,9 @@ export default class MarkerModal extends Component {
                   <Text type="TINY">In the news!</Text>
                 </Badge>*/}
               </AllBadgesContainer>
-              <Text style={{margin: 'auto', textAlign: "center"}} type="TINY">{this.state.badgeInfo}</Text>
+              <Text style={{ margin: "auto", textAlign: "center" }} type="TINY">
+                {this.state.badgeInfo}
+              </Text>
             </Modal>
           </CSSTransition>
           <CSSTransition
