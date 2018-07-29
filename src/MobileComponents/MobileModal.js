@@ -41,7 +41,7 @@ const CoverTitle = glamorous.div({
 const ChatModalContainer = glamorous.div({
   display: "flex",
   height: "auto",
-  padding: "20px 50px",
+  padding: "20px 50px 0 0",
   flexDirection: "column",
   justifyContent: "space-between"
 });

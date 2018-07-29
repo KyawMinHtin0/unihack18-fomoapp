@@ -15,6 +15,7 @@ import ChatControls from "./Components/ChatControls";
 import MobileMap from "./MobileComponents/MobileMap";
 import MobileModal from "./MobileComponents/MobileModal";
 import MapChatBox from "./Components/MapChatBox";
+import Logo from "./Images/logo.png";
 
 require("dotenv").config();
 
@@ -55,7 +56,12 @@ const DebugText = glamorous.div({
 const MarkerContainer = glamorous.div({
   display: "flex"
 });
-const Box = glamorous.div({});
+const LogoBox = glamorous.img({
+  position: "absolute",
+  height: "50px",
+  top: "20px",
+  left: "20px"
+});
 
 class App extends Component {
   state = {
@@ -156,6 +162,7 @@ class App extends Component {
           data={Data}
           show={!interactive}
         />
+        <LogoBox src={Logo} />
       </div>
     );
   }
