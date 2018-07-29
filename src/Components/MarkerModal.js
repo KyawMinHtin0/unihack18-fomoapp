@@ -6,6 +6,7 @@ import { Text } from "./Text";
 import ChatBox from "./ChatBox";
 import { MODAL_HEIGHT, MODAL_WIDTH, COLORS } from "../Utils/Constants";
 import InstaBadge from "../Images/insta.png";
+import defaultCover from "../Images/crowd.jpeg";
 import SkyBadge from "../Images/castle.png";
 import NewsBadge from "../Images/news.png";
 import DrinkBadge from "../Images/drink.png";
@@ -75,7 +76,7 @@ const Cover = glamorous.div(
     backgroundPosition: "center "
   },
   props => {
-    const imgUrl = props.imgUrl;
+    const imgUrl = props.imgUrl ? props.imgUrl : defaultCover;
     return {
       backgroundImage: `linear-gradient(to bottom, ${COLORS.NAVY}20, ${
         COLORS.NAVY
@@ -285,7 +286,6 @@ export default class MarkerModal extends Component {
             </Cover>
             <Description>
               {desc}
-              <Text type="EXPAND_BUTTON">more info</Text>
             </Description>
           </Modal>
         </CSSTransition>
