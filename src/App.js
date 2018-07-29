@@ -185,7 +185,6 @@ class App extends Component {
     console.log(Data);
     return (
       <div className="App">
-        This is mobile
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={MobileMap} />

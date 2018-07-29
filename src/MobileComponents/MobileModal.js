@@ -76,15 +76,24 @@ export default class MobileModal extends Component {
       <div>
         <Cover imgUrl={imgUrl}>
           <Link to={{ pathname: "/" }}>
-            <Text type="MESSAGE">Back</Text>
+            <Text type="MESSAGE">
+              <b>Back</b>
+            </Text>
           </Link>
           <CoverTitle>{name}</CoverTitle>
         </Cover>
         <ChatModalContainer>
           <ChatBox name={name} />
-          <ChatControls name={name} />
+          <Div
+            style={{
+              position: "fixed",
+              bottom: 0,
+              width: "100%"
+            }}
+          >
+            <ChatControls name={name} />
+          </Div>
         </ChatModalContainer>
-        Empty {this.props.match.params.number}
       </div>
     );
   }
