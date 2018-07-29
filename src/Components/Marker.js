@@ -10,7 +10,6 @@ export const TrendingMarker = glamorous.div({
   borderWidth: "5px",
   boxShadow: "1px 1px 1px lightgrey",
   transition: "border-color 0.3s, background-color 0.1s, transform 0.3s",
-  zIndex: 100,
   ":hover": {
     backgroundColor: "white",
     borderColor: "#4464AD",

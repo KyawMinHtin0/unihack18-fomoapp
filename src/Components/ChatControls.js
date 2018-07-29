@@ -29,7 +29,7 @@ const MessageInputBox = glamorous.input({
   fontColor: "black",
   alignSelf: "flex-end",
   flexgrow: "1",
-
+  bottom: "0",
   ":focus": {
     outlineWidth: 0
   }
