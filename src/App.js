@@ -3,7 +3,7 @@ import MapGL, { Marker } from "react-map-gl";
 import glamorous from "glamorous";
 import { CSSTransition } from "react-transition-group";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-
+import { Text } from "./Components/Text";
 import { MELB_LAT, MELB_LONG, MODAL_HEIGHT } from "./Utils/Constants";
 import { Data } from "./Utils/LocationV1";
 
@@ -104,7 +104,9 @@ class App extends Component {
           <TrendingMarker onClick={() => this.toggleModal(index)} />
           <MapChatBox name={name} />
         </MarkerContainer>
-        {name}
+        <Text type="SMALL">
+          <b>{name}</b>
+        </Text>
       </Marker>
     );
   };
